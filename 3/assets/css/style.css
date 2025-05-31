@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+}
+.container {
+    /* width: 90%;
+    max-width: 970px;
+    margin: 0 auto; */
+    width: min(90%, 970px);
+    margin-inline: auto;
+}
+
+.contant {
+    width: min(90%, 480px);
+    margin-inline: auto;
+}
+.grey {
+    background-color: #F6F6F6;
+}

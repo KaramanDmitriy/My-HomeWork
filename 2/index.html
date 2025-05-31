@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Семантичні елементи</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#intro">Вступ</a></li>
+                <li><a href="#section-support">Підтримка браузерів</a></li>
+                <li><a href="#section-new-elements">Нові семантичні елементи</a></li>
+                <li><a href="#section-section">Елемент &lt;section&gt;</a></li>
+                <li><a href="#section-article">Елемент &lt;article&gt;</a></li>
+                <li><a href="#section-header">Елемент &lt;header&gt;</a></li>
+                <li><a href="#section-footer">Елемент &lt;footer&gt;</a></li>
+                <li><a href="#section-video">Відеоматеріал "Front-End розробка"</a></li>
+                <li><a href="#section-resume">Резюме</a></li>
+                <li><a href="#section-my-site">Зроблений сайт на замовлення</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h1 id="intro">HTML5 Семантичні елементи</h1>
+            <p>Семантичний елемент чітко описує його значення як для браузера, так і для розробника.</p>
+            <P>Приклади <strong>не семантичних</strong> елементів: &lt;div&gt; і &lt;span&gt;- нічого не говорить
+                про його вміст.
+            </p>
+            <p>
+                Приклади <strong>семантичних</strong> елементів: &lt;form&gt;, &lt;table&gt; і &lt;article&gt;- чітко
+                визначає його зміст.
+            </p>
+            <section id="section-support">
+                <h2>Підтримка браузерів</h2>
+                <img src="assets/img/list-browsers.png" width="25%" alt="list-browsers">
+                <p>Семантичні елементи HTML5 підтримуються у всіх сучасних браузерах.</p>
+                <p>Крім того, ви можете "навчити" старих браузерів, як обробляти "невідомі
+                    елементи".
+                </p>
+                <p>Прочитайте про це в <a href="https://www.blogger.com/onboarding">підтримці браузера HTML5.</a></p>
+            </section>
+            <section id="section-new-elements">
+                <h2>Нові семантичні елементи в HTML5</h2>
+                <p>HTML5 пропонує нові семантичні елементи для визначення різних частин веб-сторінки:</p>
+                <ul>
+                    <li>&lt;section&gt;</li>
+                    <li>&lt;article&gt;</li>
+                    <li>&lt;header&gt;</li>
+                    <li>&lt;footer&gt;</li>
+                </ul>
+            </section>
+            <section id="section-section">
+                <h2>HTML5 &lt;section&gt; елемент</h2>
+                <p>Елемент &lt;section&gt; визначає розділ в документі.</p>
+                <p>Згідно з документацією W3c HTML5: "розділ представляє собою тематичну
+                    угруповання контенту, зазвичай з заголовком".
+                </p>
+                <p>Домашня сторінка зазвичай може бути розділена на розділи для
+                    ознайомлення, змісту і контактної інформації.</p>
+                <img src="assets/img/section-template.png" width="35%" alt="section-template">
+            </section>
+            <section id="section-article">
+                <h2>HTML5 &lt;article&gt; елемент </h2>
+                <p>
+                    Елемент &lt;article&gt; визначає незалежний, автономний вміст.
+                </p>
+                <p>
+                    Стаття повинна мати сенс самостійно, і вона повинна мати можливість
+                    читати його незалежно від іншої частини веб-сайту.
+                </p>
+                <p>
+                    Приклади того, де можна використовувати елемент &lt;article&gt;:
+                </p>
+                <ul>
+                    <li>Повідомлення на форумі</li>
+                    <li>блозі</li>
+                    <li>Газетна стаття</li>
+                </ul>
+                <img src="assets/img/article-template.png" alt="article-template">
+            </section>
+            <section id="section-header">
+                <h2>HTML5 &lt;header&gt; елемент</h2>
+                <p>Елемент &lt;header&gt; задає заголовок для документа або розділу.</p>
+                <p>Елемент &lt;header&gt; повинен використовуватися в якості контейнера для
+                    вступного змісту.
+                </p>
+                <p>В одному документі може бути кілька елементів &lt;header&gt;.</p>
+                <p>У наступному прикладі визначається заголовок для статті:</p>
+                <img src="assets/img/header-template.png" width="35%" alt="header-template">
+            </section>
+            <section id="section-footer">
+                <h2>HTML5 &lt;footer&gt; елемент</h2>
+                <p>Елемент &lt;footer&gt; вказує нижній колонтитул для документа або розділу</p>
+                <p>Нижній колонтитул зазвичай містить автора документа, інформацію про
+                    авторське право, посилання на умови використання, контактні дані і т.д.
+                </p>
+                <p>В одному документі може бути кілька елементів &lt;footer&gt;.</p>
+                <img src="assets/img/footer-template.png" width="35%" alt="footer-template">
+            </section>
+        </article>
+        <section id="section-video">
+            <h2>Відеоматеріал "Front-End розробка"</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dEBVe8Ij7JU?si=epbWHQDQl_4_8Xd2"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        <section id="section-resume">
+            <h2>Резюме</h2>
+            <iframe src="Resume/index.html" frameborder="0" width="800" height="400"></iframe>
+        </section>
+        <section id="section-my-site">
+            <h2>Зроблений сайт на замовлення</h2>
+            <a href="https://consulting.kiev.ua/">https://consulting.kiev.ua/</a>
+            <iframe src="https://consulting.kiev.ua/" frameborder="0" width="100%" height="900"></iframe>
+        </section>
+    </main>
+    <div>Щоб піднятись до гори натисни <a href="#"><b>СЮДИ</b></a></div>
+</body>
+</html>
