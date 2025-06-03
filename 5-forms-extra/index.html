@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms-extra</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="#" method="post" target="_blank" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Реєстрація користувача</legend>
+                <div class="form-row">
+                    <label for="fullname">Повне ім'я:</label>
+                    <input type="text" id="fullname" placeholder="Введіть повне ім'я" name="fullname" required>
+                </div>
+                <div class="form-row">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="name@gmail.com" name="email" required>
+                </div>
+                <div class="form-row">
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" placeholder="********" name="password" required>
+                </div>
+                <div class="form-row">
+                    <label for="confirm_password">Підтвердження пароля:</label>
+                    <input type="password" id="confirm_password" placeholder="********" name="confirm_password"
+                        required>
+                </div>
+                <div class="form-row">
+                    <span>Стать:</span>
+                    <div>
+                        <label><input type="radio" name="gender" value="Чоловік" checked>Чоловік</label>
+                        <label><input type="radio" name="gender" value="Жінка">Жінка</label>
+                    </div>
+
+                </div>
+                <div class="form-row">
+                    <label for="age">Вік</label>
+                    <input type="number" id="age" placeholder="Маєш бути старше 18" min="18" maxlength="3" name="age">
+                </div>
+                <div class="form-row">
+                    <label for="courses">Курс:</label>
+                    <select id="courses" name="course" required onchange="disableDefaultOption(this)">
+                        <option value="default" selected disabled>- =Виберіть курс=-</option>
+                        <option value="frontend">Front-End</option>
+                        <option value="backend">Back-End</option>
+                        <option value="pm">Project Management</option>
+                        <option value="qa">QA</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="address">Повна адреса:</label>
+                    <textarea id="address" name="address" placeholder="м.Київ, вул. Шевченка" required></textarea>
+                </div>
+                <div class="form-privacy">
+                    <input id="privacy" type="checkbox" name="privacy" required>
+                    <label for="privacy">Я погоджуюсь з умовами конфіденційності</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Додаткові дані</legend>
+                <div class="form-row">
+                    <label for="phone-color">Колір телефону:</label>
+                    <input type="color" name="phone-color" id="phone-color" value="black">
+                </div>
+                <div class="form-row">
+                    <label for="birthday">День народження:</label>
+                    <input type="date" name="birthday" id="birthday" value="1990-06-01">
+                </div>
+                <div class="form-row">
+                    <label for="upbed">Час коли прокидаєшся:</label>
+                    <input type="time" name="upbed" id="upbed" value="07:00">
+                </div>
+                <div class="form-row">
+                    <label for="avatar">Фото профілю:</label>
+                    <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+                </div>
+                <div class="form-row">
+                    <label for="english">Знання англійської:</label>
+                    <div>
+                        A0<input type="range" name="english" min="0" max="10" />С1
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label for="site-search">Пошук по сайту:</label>
+                    <input type="search" target="_blank" id="site-search" name="q" />
+                </div>
+            </fieldset>
+            <div class="forms-buttons">
+                <button type="reset"><b>Очистити форму</b></button>
+                <button type="submit"><b>Зареєструватися</b></button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
