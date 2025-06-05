@@ -123,11 +123,13 @@ body{
     text-align: center;
     width: min(90%, 260px);
     margin: 0 auto;
-    padding-top: 40px;
+    margin-top: 40px;
     margin-bottom: 70px;
 }
 .portfolio-list li:last-child a {
     margin-bottom: 0;
+}
+#portfolio {
     padding-bottom: 60px;
 }
 .contacts-title {
