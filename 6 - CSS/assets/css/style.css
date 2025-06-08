@@ -11,6 +11,9 @@ a {
     color: #070707;
     cursor: pointer;
 }
+img {
+    vertical-align: top;
+}
 body{
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
@@ -55,11 +58,11 @@ body{
     padding-top: 12px;
     font-size: 48px;
     font-weight: 700;
-    margin-bottom: 50px;
+    margin-bottom: 46px;
 }
 .about-title{
     padding-top: 100px;
-    margin-bottom: 50px;
+    margin-bottom: 44px;
     text-align: center;
     font-size: 34px;
     font-weight: 700;
@@ -68,33 +71,52 @@ body{
     width: min(90%, 480px);
     margin-inline: auto;
     text-align: center;
-    padding-bottom: 100px;
+    padding-bottom: 104px;
 }
 .about-contant p {
     margin-bottom: 30px;
 }
+.about-contant p:last-child {
+    margin-bottom: 0;
+}
+
 .skills-title {
     padding-top: 100px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     text-align: center;
+    font-size: 34px;
 }
 .skills-subtitle {
-    margin-bottom: 50px;
+    margin-bottom: 49px;
     text-align: center;
 }
 .skills-items{
     text-align: center;
+    font-size: 0;
+    margin-left: -1px;
+    
 }
 .skills-items li{
     display: inline-block;
     text-align: center;
-    margin-right: 96px;
+    margin-right: 97px;
+    max-width: 170px;
+    max-height: 230px;
+    position: relative;
+    font-size: 14px;
+
 }
 .skills-items li:last-child{
     margin-right: 0;
 }
 .skills-items li img {
     margin-bottom: 25px;
+    vertical-align: top;
+}
+.skills-items li:last-child>img {
+    position: absolute;
+    top: -120px;
+    left: 48px;
 }
 .skills-items li p{
     color: #828282;
@@ -103,19 +125,19 @@ body{
     letter-spacing: 0.28px;
     margin: 0 auto;
     margin-bottom: 60px;
-    width: 65%;
+    
     /* text-align: center; */
 }
 .star-opacity {
     opacity: .2;
 }
 #skills{
-    padding-bottom: 100px;
+    padding-bottom: 78px;
 }
 .portfolio-title{
     text-align: center;
-    padding-top: 100px;
-    margin-bottom: 50px;
+    padding-top: 97px;
+    margin-bottom: 45px;
     font-size: 34px;
     font-weight: 700;
 }
@@ -131,11 +153,11 @@ body{
     margin-bottom: 0;
 }
 #portfolio {
-    padding-bottom: 60px;
+    padding-bottom: 100px;
 }
 .contacts-title {
     padding-top: 100px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     text-align: center;
     font-size: 34px;
     font-weight: 700;
@@ -158,8 +180,9 @@ body{
     background: #070707;
     color: #fff;
     text-decoration: none;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
     transition: all 0.5s ease;
+    letter-spacing: 2px;
 }
 
 .contacts-button-msg:hover {
