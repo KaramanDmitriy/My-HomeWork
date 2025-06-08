@@ -45,14 +45,12 @@ body{
 .header-nav-list ul li a{
     color: #828282;
     letter-spacing: 0.36px;
-    transition: font-weight 0.5s ease;
+    transition: text-shadow 0.3s ease;
     text-decoration: none;
 }
-.header-nav-list ul li a:hover {
-    font-weight: 700;
-}
-.header-nav-list ul li .header-nav-list--active{
+.header-nav-list ul li a:hover, .header-nav-list ul li a:active {
     color: #070707;
+    text-shadow: 1px 0 1px #070707;
 }
 .home-title{
     padding-top: 12px;
@@ -91,32 +89,23 @@ body{
     text-align: center;
 }
 .skills-items{
-    text-align: center;
-    font-size: 0;
-    margin-left: -1px;
-    
+    display: flex;
+    justify-content: space-between;
+    font-size: 0; 
 }
-.skills-items li{
+.skills-items li {
     display: inline-block;
     text-align: center;
-    margin-right: 97px;
-    max-width: 170px;
-    max-height: 230px;
+    width: 170px;
+    height: 230px;
     position: relative;
     font-size: 14px;
-
-}
-.skills-items li:last-child{
-    margin-right: 0;
 }
 .skills-items li img {
     margin-bottom: 25px;
-    vertical-align: top;
 }
-.skills-items li:last-child>img {
-    position: absolute;
-    top: -120px;
-    left: 48px;
+.skills-items li:last-child div img {
+    padding-top: 19px;
 }
 .skills-items li p{
     color: #828282;
@@ -125,14 +114,23 @@ body{
     letter-spacing: 0.28px;
     margin: 0 auto;
     margin-bottom: 60px;
-    
-    /* text-align: center; */
+}
+.skills-stars {
+    margin-left: -2px;
+    margin-right: -5px;
+}
+.skills-stars img {
+    margin-right: 8px;
+    width: 26px;
+}
+.skills-stars img:last-child {
+    margin-right: 0;
 }
 .star-opacity {
     opacity: .2;
 }
 #skills{
-    padding-bottom: 78px;
+    padding-bottom: 100px;
 }
 .portfolio-title{
     text-align: center;
@@ -148,6 +146,10 @@ body{
     margin: 0 auto;
     margin-top: 40px;
     margin-bottom: 70px;
+    transition: text-decoration .3s ease;
+}
+.portfolio-list li a:hover {
+    text-decoration: none;
 }
 .portfolio-list li:last-child a {
     margin-bottom: 0;
