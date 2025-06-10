@@ -13,13 +13,13 @@ body {
     font-family: "Roboto", sans-serif;
     background-color: #3B3F45;
     color: #fff;
-    font-size: 18px;
+    font-size: 27px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 32px;
 }
 .container {
-    width: min(90%, 793px);
+    width: min(90%, 1200px);
     margin: 0 auto;
     padding: 50px;
 }
@@ -30,27 +30,30 @@ body {
 }
 h1 {
     text-align: center;
-    font-size: 24px;
-    margin-bottom: 4px;
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 6px;
     color: #FF8984;
-    padding-top: 19px;
+    padding-top: 23px;
 }
 hgroup {
-    padding-bottom: 12px;
+    padding-bottom: 23px;
     background: #4A4F56;
 }
 hgroup p {
     color: #FF8984;
+    font-size: 24px;
+    line-height: 28px;
 }
 p {
     text-align: center;
     color: #fff;
 }
 .shopping-list {
-    width: min(90%, 534px);
+    width: min(90%, 800px);
     margin: 0 auto;
-    margin-bottom: 45px;
-    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-top: 40px;
     background-color: #88839E;
 }
   
@@ -61,7 +64,8 @@ p {
     display: flex;
 }
   .item label span {
-    font-size: 11px;
+    font-size: 17px;
+    line-height: 22px;
 }
   
 .shopping-list li:hover {
@@ -100,7 +104,7 @@ p {
 }
   
 .shopping-list label {
-    font-size: 18px;
+    font-size: 27px;
     cursor: pointer;
     transition: color 0.3s ease, text-decoration 0.3s ease;
 
@@ -114,16 +118,18 @@ p {
 .item label span {
     display: inline-block;
     vertical-align: middle;
-    padding-bottom: 3px;
+    padding-bottom: 4px;
 }
 .wrapper-modal>div {
-    margin: 0 auto;
     margin-bottom: 45px;
+    font-size: 28px;
     color: #FF8984;
     background-color: #4A4F56;
-    padding: 12px 223px 12px 204px;
-    width: min(90%, 534px);
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: min(90%, 800px);
     margin: 0 auto;
+    text-align: center;
     margin-bottom: 45px;
 }
 .item:has(input[type="checkbox"]:checked) {
