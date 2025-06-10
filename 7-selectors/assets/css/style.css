@@ -60,7 +60,7 @@ p {
 .shopping-list li {
     transition: all 0.3s ease;
     color: #fff;
-    height: 45px;
+    height: 68px;
     display: flex;
 }
   .item label span {
