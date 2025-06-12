@@ -19,122 +19,110 @@ body {
     line-height: 32px;
 }
 .container {
-    /* width: min(90%, 1200px); */
+    width: min(90%, 800px);
     margin: 0 auto;
-    /* padding: 50px; */
-}
-.wrapper-modal {
-    /* box-shadow: 0 6px 18px rgba(216, 149, 149, 0.6);
-    border: 1px solid #a94f4f; */
-    width: 100%;
-}
-h1 {
-    text-align: center;
-    font-size: 36px;
-    line-height: 42px;
-    margin-bottom: 6px;
-    color: #FF8984;
-    padding-top: 23px;
 }
 hgroup {
     padding-bottom: 23px;
     background: #4A4F56;
+    h1 {
+        text-align: center;
+        font-size: 36px;
+        line-height: 42px;
+        margin-bottom: 6px;
+        color: #FF8984;
+        padding-top: 23px;
+    }
+    p {
+        color: #FF8984;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+    }
 }
-hgroup p {
-    color: #FF8984;
-    font-size: 24px;
-    line-height: 28px;
-}
-p {
-    text-align: center;
-    color: #fff;
+label {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    padding: 15px 0 15px 0;
+    span {
+        position: relative;
+        top: -4px;
+        display: inline-block;
+        margin-left: 14px;
+        font-size: 27px;
+        line-height: 32px; 
+        vertical-align: middle;
+        small {
+            position: relative;  
+            top: -4px; 
+            left: 10px;
+            font-size: 17px;
+            line-height: 20px;
+        }
+    }
 }
 .shopping-list {
-    width: min(90%, 800px);
-    margin: 0 auto;
     margin-bottom: 40px;
     margin-top: 40px;
     background-color: #88839E;
+    li {
+        color: #fff;
+        height: 68px;
+        border-top: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        transition: all 0.3s ease;
+        &:nth-child(even) {
+            background: #625E77;
+            box-shadow: 0 4px 10px rgba(19, 16, 26, 0.5);
+        }
+        &:hover {
+            border-color: #fff;
+            background: #48445e;
+        }
+        &:active {
+            background: #744e5b;
+        }
+    }
+    input[type="checkbox"] {
+        appearance: none;
+        width: 28px;
+        height: 28px;
+        border: 1px solid #fff;
+        background-color: #fff;
+        position: relative;
+        cursor: pointer;
+        margin-left: 15px;
+        top: 2px;
+        &:checked::after {
+                content: "✔";
+                color: #000;
+                position: absolute;
+                font-size: 22px;
+                top: -2px;
+                left: 5px;
+        } 
+        &:checked + span {
+            color: #9B96AC;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background-color: #9B96AC;
+                top: 48%;
+                left: 0;
+            }
+        } 
+    }
 }
-  
-.shopping-list li {
-    transition: all 0.3s ease;
-    color: #fff;
-    height: 68px;
-    display: flex;
-}
-  .item label span {
-    font-size: 17px;
-    line-height: 22px;
-}
-  
-.shopping-list li:hover {
-    border-top: 3px solid #fff;
-    border-bottom: 3px solid #fff;
-    background: #625E77;
-}
-  
-.shopping-list div {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-  
-.shopping-list input[type="checkbox"] {
-    appearance: none;
-    width: 19px;
-    height: 19px;
-    border: 1px solid #fff;
-    position: relative;
-    cursor: pointer;
-    margin-left: 12px;
-}
-  
-.shopping-list input[type="checkbox"]:checked {
-    background-color: #fff;
-    border-color: #fff;
-}
-  
-.shopping-list input[type="checkbox"]:checked::after {
-    content: "✔";
-    color: #000;
-    position: absolute;
-    top: 0;
-    left: 3px;
-}
-  
-.shopping-list label {
-    font-size: 27px;
-    cursor: pointer;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
-
-}
-  
-.shopping-list input[type="checkbox"]:checked + label,
-.shopping-list input[type="checkbox"]:checked + label span {
-    text-decoration: line-through;
-    color: #9B96AC;
-}
-.item label span {
-    display: inline-block;
-    vertical-align: middle;
-    padding-bottom: 4px;
-}
-.wrapper-modal>div {
+.desire {
     margin-bottom: 45px;
     font-size: 28px;
     color: #FF8984;
     background-color: #4A4F56;
     padding-top: 16px;
     padding-bottom: 16px;
-    width: min(90%, 800px);
-    margin: 0 auto;
     text-align: center;
-    margin-bottom: 45px;
-}
-.item:has(input[type="checkbox"]:checked) {
-    background: #7A7593;
-    width: 100%;
-    box-shadow: 0 6px 12px rgba(41, 40, 40, 0.4);
 }
 
