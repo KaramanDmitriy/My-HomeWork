@@ -1,3 +1,15 @@
+:root {
+    --accent-color: #FF8984;
+    --secondary-color: #4A4F56;
+    --text-color: #fff;
+    --background-color: #3B3F45;
+    --active-color: #744e5b;
+    --text-checked-color: #9B96AC;
+    --bg-wrapper-list: #88839E;
+    --bg-even-list: #625E77;
+    --bg-hover-list: #48445e;
+    --check: #000;
+}
 *,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 * {
     margin: 0;
@@ -11,8 +23,8 @@ ul {
 }
 body {
     font-family: "Roboto", sans-serif;
-    background-color: #3B3F45;
-    color: #fff;
+    background-color: var(--background-color);
+    color: var(--text-color);
     font-size: 27px;
     font-style: normal;
     font-weight: 400;
@@ -24,17 +36,17 @@ body {
 }
 hgroup {
     padding-bottom: 23px;
-    background: #4A4F56;
+    background: var(--secondary-color);
     h1 {
         text-align: center;
         font-size: 36px;
         line-height: 42px;
         margin-bottom: 6px;
-        color: #FF8984;
+        color: var(--accent-color);
         padding-top: 23px;
     }
     p {
-        color: #FF8984;
+        color: var(--accent-color);
         font-size: 24px;
         line-height: 28px;
         text-align: center;
@@ -60,56 +72,55 @@ label {
             font-size: 17px;
             line-height: 20px;
         }
-    }
+    }  
 }
 .shopping-list {
     margin-bottom: 40px;
     margin-top: 40px;
-    background-color: #88839E;
+    background-color: var(--bg-wrapper-list);
     li {
-        color: #fff;
+        color: var(--text-color);
         height: 68px;
         border-top: 3px solid transparent;
         border-bottom: 3px solid transparent;
         transition: all 0.3s ease;
         &:nth-child(even) {
-            background: #625E77;
-            box-shadow: 0 4px 10px rgba(19, 16, 26, 0.5);
+            background: var(--bg-even-list);  
         }
         &:hover {
-            border-color: #fff;
-            background: #48445e;
+            border-color: var(--text-color);
+            background: var(--bg-hover-list);
         }
         &:active {
-            background: #744e5b;
+            background: var(--active-color);
         }
     }
     input[type="checkbox"] {
         appearance: none;
         width: 28px;
         height: 28px;
-        border: 1px solid #fff;
-        background-color: #fff;
+        border: 1px solid var(--text-color);
+        background-color: var(--text-color);
         position: relative;
         cursor: pointer;
         margin-left: 15px;
         top: 2px;
         &:checked::after {
                 content: "✔";
-                color: #000;
+                color: var(--check);
                 position: absolute;
                 font-size: 22px;
                 top: -2px;
                 left: 5px;
         } 
         &:checked + span {
-            color: #9B96AC;
+            color: var(--text-checked-color);
             &::after {
                 content: "";
                 position: absolute;
                 width: 100%;
                 height: 1px;
-                background-color: #9B96AC;
+                background-color: var(--text-checked-color);
                 top: 48%;
                 left: 0;
             }
@@ -119,8 +130,8 @@ label {
 .desire {
     margin-bottom: 45px;
     font-size: 28px;
-    color: #FF8984;
-    background-color: #4A4F56;
+    color: var(--accent-color);
+    background-color: var(--secondary-color);
     padding-top: 16px;
     padding-bottom: 16px;
     text-align: center;
