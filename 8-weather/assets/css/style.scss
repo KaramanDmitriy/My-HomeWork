@@ -1,0 +1,65 @@
+$bg-outside-color: #2B81AC;
+$bg-inside-color: #3399CC;
+$text-color: #fff;
+@font-face {
+    font-family: "Lucida Sans Unicode";
+    src: url("../fonts/lucida-sans-unicode.ttf") format("truetype");
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul, ol {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+a, button {
+    transition: all .3s ease-in;
+}
+body{
+    font-family: "Lucida Sans Unicode", sans-serif;
+    background-color: $bg-outside-color;
+    color: $text-color;
+    font-size: 22px;
+}
+main {
+    padding-top: 25px;
+    .container {
+        padding: 41px 112px 94px 112px;
+    }
+}
+.container {
+    width: min(90%, 1390px);
+    margin: 0 auto;
+    background-color: $bg-inside-color;
+}
+.title {
+    margin-bottom: 40px;
+}
+.forecast {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $text-color;
+    padding: 4px;
+    margin-bottom: 37px;
+    gap: 4px;
+    .city {
+        background-color: #3399CC;
+        height: 151px;
+        text-align: center;
+    }
+    .half {
+        flex: 0 0 49.8%;;
+    }
+    .quarter {
+        flex: 0 0 24.7%;
+    }
+    .full {
+        flex: 0 0 100%;
+    }
+
+
+}
