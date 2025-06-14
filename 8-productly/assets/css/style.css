@@ -18,7 +18,7 @@ a, button {
 
 .btn {
   text-decoration: none;
-  padding: 12px 25px;
+  padding: 12px 17px;
   background-color: #F90;
   color: #fff;
   border-radius: 4px;
@@ -39,6 +39,7 @@ a, button {
   background-color: transparent;
   color: #544837;
   border: 1px solid #544837;
+  padding: 12px 22px;
 }
 .btn.btn-secondary:hover {
   color: #F03E3D;
@@ -92,4 +93,34 @@ header .container {
 .buttons-group {
   display: flex;
   gap: 32px;
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 90px 0;
+  gap: 60px;
+}
+.hero .container .hero-content .hero-content-wrapp {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: space-between;
+}
+.hero .container .hero-content .hero-content-wrapp h1 {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 54px;
+  font-style: normal;
+  color: #2F281E;
+}
+.hero .container .hero-content .hero-content-wrapp p {
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 22px;
+}
+.hero .container .hero-content .hero-content-wrapp button.btn-hero {
+  padding: 12px 0;
+  width: 180px;
 }
