@@ -24,6 +24,9 @@ body{
     background-color: $bg-outside-color;
     color: $text-color;
     font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 main {
     padding-top: 25px;
@@ -37,7 +40,11 @@ main {
     background-color: $bg-inside-color;
 }
 .title {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
+    font-size: 21px;
+    i {
+        margin-left: 12px;
+    }
 }
 .forecast {
     display: flex;
@@ -48,8 +55,67 @@ main {
     gap: 4px;
     .city {
         background-color: #3399CC;
-        height: 151px;
+        height: 142px;
         text-align: center;
+        &:nth-child(1) {
+            background-color: #71B8DB;
+        }
+        &:nth-child(2) {
+            background-color: #33CCCC;
+        }
+        &:nth-child(3) {
+            background-color: #996699;
+        }
+        &:nth-child(4) {
+            background-color: #C24747;
+        }
+        &:nth-child(5) {
+            background-color: #E2674A;
+        }
+        &:nth-child(6) {
+            background-color: #FFCC66;
+        }
+        &:nth-child(7) {
+            background-color: #99CC99;
+        }
+        &:nth-child(8) {
+            background-color: #669999;
+        }
+        &:nth-child(9) {
+            background-color: #CC6699;
+        }
+        &:nth-child(10) {
+            background-color: #339966;
+        }
+        &:nth-child(11) {
+            background-color: #666699;
+        }
+        a {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            color: $text-color;
+            text-decoration: none;
+            &:first-child {
+                padding-top: 24px;
+                margin-bottom: 4px;
+            }
+            .temp {
+                display: flex;
+                align-items: center;
+            }
+            
+            .temp i {
+                margin-left: 17px;
+                font-size: 42px;
+                line-height: normal;
+            }
+        }
+        .temp, .wi {
+            opacity: 0.7;
+        }
     }
     .half {
         // flex: 0 0 49.8%;
@@ -65,4 +131,7 @@ main {
     }
 
 
+}
+.note {
+    font-size: 16px;
 }
