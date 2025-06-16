@@ -98,31 +98,27 @@ header{
     justify-content: space-between;
     padding: 90px 0;
     gap: 60px;
-    .hero-content {
-        // flex-basis: 40%;
-        .hero-content-wrapp {
-            display: flex;
-            flex-direction: column;
-            height: 300px;
-            justify-content: space-between;
+    .hero-content-wrapp {
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+        justify-content: space-between;
               
-            h1 {
-                font-size: 44px;
-                font-weight: 700;
-                line-height: 54px;
-                font-style: normal;
-                color: $h1-color;
-            }
-            p {
-                font-size: 18px;
-                line-height: 28px;
-                margin-bottom: 22px;
-            }
-            button.btn-hero {
-                padding: 12px 0;
-                width: 180px;
-            }
-        }   
-    }
-    
+        h1 {
+            font-size: 44px;
+            font-weight: 700;
+            line-height: 54px;
+            font-style: normal;
+            color: $h1-color;
+        }
+        p {
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 22px;
+        }
+        button.btn-hero {
+            padding: 12px 0;
+            width: 180px;
+        }
+    }     
 }
