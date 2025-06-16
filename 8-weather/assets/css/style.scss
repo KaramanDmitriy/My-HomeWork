@@ -51,46 +51,13 @@ main {
     display: flex;
     flex-wrap: wrap;
     background-color: $text-color;
-    padding: 4px;
+    padding: 2px;
     margin-bottom: 37px;
-    gap: 4px;
     .city {
-        background-color: #3399CC;
         max-height: 142px;
         text-align: center;
-        &:nth-child(1) {
-            background-color: #71B8DB;
-        }
-        &:nth-child(2) {
-            background-color: #33CCCC;
-        }
-        &:nth-child(3) {
-            background-color: #996699;
-        }
-        &:nth-child(4) {
-            background-color: #C24747;
-        }
-        &:nth-child(5) {
-            background-color: #E2674A;
-        }
-        &:nth-child(6) {
-            background-color: #FFCC66;
-        }
-        &:nth-child(7) {
-            background-color: #99CC99;
-        }
-        &:nth-child(8) {
-            background-color: #669999;
-        }
-        &:nth-child(9) {
-            background-color: #CC6699;
-        }
-        &:nth-child(10) {
-            background-color: #339966;
-        }
-        &:nth-child(11) {
-            background-color: #666699;
-        }
+        margin: 2px;
+        transition: all .2s ease;
         a {
             display: flex;
             flex-wrap: wrap;
@@ -100,9 +67,6 @@ main {
             color: $text-color;
             text-decoration: none;
             padding-bottom: 20px;
-            &:hover {
-                background-color: #990606;
-            }
             &:active {
                 background-color: #100101;
             }
@@ -114,7 +78,6 @@ main {
                 display: flex;
                 align-items: center;
             }
-            
             .temp i {
                 margin-left: 13px;
                 font-size: 42px;
@@ -129,11 +92,11 @@ main {
     }
     .half {
         // flex: 0 0 49.8%;
-        flex-basis: 49.8%;
+        flex-basis: 49.6%;
     }
     .quarter {
         // flex: 0 0 24.7%;
-        flex-basis: 24.7%;
+        flex-basis: 24.6%;
     }
     .full {
         // flex: 0 0 100%;
@@ -142,4 +105,40 @@ main {
 }
 .note {
     font-size: 16px;
+}
+ul:hover li:not(:hover) {
+    opacity: 0.7;
+}
+.light-blue {
+    background-color: #71B8DB;
+}
+.sea-color {
+    background-color: #33CCCC;
+}
+.purple-color {
+    background-color: #996699;
+}
+.red-color {
+    background-color: #C24747;
+}
+.orange-color {
+    background-color: #E2674A;
+}
+.yellow-color {
+    background-color: #FFCC66;
+}
+.light-green {
+    background-color: #99CC99;
+}
+.dirty-green {
+    background-color: #669999;
+}
+.pink {
+    background-color: #CC6699;
+}
+.dark-green {
+    background-color: #339966;
+}
+.dark-purple {
+    background-color: #666699;
 }
