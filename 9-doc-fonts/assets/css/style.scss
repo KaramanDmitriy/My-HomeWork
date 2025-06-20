@@ -1,0 +1,123 @@
+@import 'fonts';
+$black-color: #000;
+$white-color: #fff;
+*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+* {
+    margin: 0;
+    padding: 0;
+}
+img {
+    vertical-align: top;
+}
+ul, ol {
+    list-style: none;   
+}
+a {
+    color: inherit;
+}
+body {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3rem;
+}
+.container {
+    width: min(90%, 1200px);
+    margin: 0 auto;
+}
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 0;
+    .header-left-item {
+        .lang {
+            font-family: 'Tourney', sans-serif;
+            font-size: 1.375rem;
+            color: $black-color;
+            font-weight: 600;
+            line-height: 1.125rem;
+            letter-spacing: 0.0825rem;  
+            margin-right: 45px;
+            position: relative;
+            text-decoration: none;
+            top: -3px;
+            left: 2px;
+        }
+        .fake-nav {
+            display: inline-flex;
+            width: 262px;
+            justify-content: space-between;
+            align-items: center;
+            font-family: Staatliches;
+            font-size: 1.375rem;
+            position: relative;
+            top: -2px;
+            left: 2px;
+            a {
+                color: #000;
+                font-family: Staatliches;
+                font-size: 1.375rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.04125rem;
+                text-decoration: none;
+            }
+            
+        }
+    }
+}
+h2 {
+    font-family: "Francois One";
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3rem; /* 133.333% */
+    letter-spacing: 0.09rem;
+    text-transform: uppercase;
+    padding-top: 70px;
+    span {
+        font-family: Farro;
+        font-size: 1.1rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        letter-spacing: 0.05rem;
+        position: relative;
+        top: -24px;
+        left: 11px;
+        text-transform:capitalize;
+    }
+}
+p {
+    padding-top: 40px;
+    font-family: "PT Sans";
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3rem;
+}
+.core-components .container {
+    h2 {
+        padding-top: 61px;
+    }
+    p:first-of-type {
+        padding-top: 38px;
+    }
+    p {
+        padding-top: 30px;
+        span {
+            background-color: #dadada;
+            padding: 5px 0;
+        }
+    }
+    p:nth-of-type(5) {
+        padding-top: 38px;
+    }
+    p:nth-of-type(6) {
+        padding-top: 38px;
+    }
+
+}
