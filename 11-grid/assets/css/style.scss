@@ -50,7 +50,7 @@ body {
 }
 .grid-template {
   display: grid;
-  grid-template-columns: repeat(3, minmax(370px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
   gap: 30px;
   .grid-item{
   img{
@@ -78,4 +78,7 @@ body {
   &:hover {
     box-shadow: 8px 8px 20px rgba(0, 0, 0, .5);
   }
+}
+.portrait .container {
+  margin-bottom: 60px;
 }
