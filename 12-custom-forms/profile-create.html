@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/plugins/select2.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+
+<body>
+    <main>
+        <div class="modal-wrapper">
+            <div class="container">
+                <h2>Profile</h2>
+                <div class="downloads-group">
+                    <img src="assets/images/profile-img.png" alt="profile-img">
+                    <input type="file">
+                    <button type="button"></button>
+                </div>
+                <form method="post" action="#" class="form-signup">
+                    <div class="template-group-input">
+                        <div class="item1">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city">
+                        </div>
+                        <div class="item2">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                    </div>
+                    <div class="template-group-input">
+                        <div class="item1">
+                            <label for="country">Country</label>
+                            <select class="js-example-disabled-results" id="country" name="country">
+                                <option value="" selected disabled>Select</option>
+                                <option value="Ukraine">Ukraine</option>
+                                <option value="Poland">Poland</option>
+                                <option value="Germany">Germany</option>
+                            </select>
+                        </div>
+                        <div class="item2">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city">
+                        </div>
+                    </div>
+                    <div class="template-group-input">
+                        <div class="item1">
+                            <label for="zip-code">Zip Code</label>
+                            <input type="number" id="zip-code" name="zip-code">
+                        </div>
+                        <div class="item2">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+                    <button class="btn btn-update" type="submit">Update</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/plugins/jquery.min.js"></script>
+    <script src="assets/plugins/select2.full.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

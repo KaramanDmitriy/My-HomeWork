@@ -1,0 +1,1 @@
+"use strict";$(document).ready(function(){$("#mySelect").select2({placeholder:"Оберіть країну",allowClear:!0})});var $disabledResults=$(".js-example-disabled-results");$disabledResults.select2();
