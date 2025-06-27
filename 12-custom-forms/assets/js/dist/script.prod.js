@@ -1,1 +1,1 @@
-"use strict";$(document).ready(function(){$("#mySelect").select2({placeholder:"Оберіть країну",allowClear:!0})});var $disabledResults=$(".js-example-disabled-results");$disabledResults.select2();
+"use strict";$(document).ready(function(){$("#mySelect").select2({placeholder:"Оберіть країну",allowClear:!0}),$('input[type="file"]').on("change",function(e){$(".file-name").text(e.target.value.split("\\").pop())})});var $disabledResults=$(".js-example-disabled-results");$disabledResults.select2();

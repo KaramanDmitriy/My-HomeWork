@@ -13,17 +13,29 @@
     <main>
         <div class="modal-wrapper">
             <div class="container">
-                <h2>Profile</h2>
+                <h2 class="title-profile">Profile</h2>
                 <div class="downloads-group">
-                    <img src="assets/images/profile-img.png" alt="profile-img">
-                    <input type="file">
-                    <button type="button"></button>
+                    <div class="profile-img">
+                        <img src="assets/images/profile-img.png" alt="profile-img">
+                    </div>
+                    <div class="right-items-wrapper">
+                        <div class="file-block">
+                            <div class="fake-file">
+                                <div class="file-name"></div>
+                                <input type="file">
+                            </div>
+                            <div class="file-descr">Up to 1 MB (300x300 px)</div>
+                        </div>
+                        <div class="button-wrapper">
+                            <button type="button"></button>
+                        </div>
+                    </div>
                 </div>
-                <form method="post" action="#" class="form-signup">
+                <form method="post" action="#" class="form-signup" enctype="multipart/form-data">
                     <div class="template-group-input">
                         <div class="item1">
-                            <label for="city">City</label>
-                            <input type="text" id="city" name="city">
+                            <label for="city">Name</label>
+                            <input type="text" id="name" name="name">
                         </div>
                         <div class="item2">
                             <label for="email">E-mail</label>

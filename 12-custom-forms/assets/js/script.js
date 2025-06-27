@@ -4,6 +4,9 @@
           placeholder: "Оберіть країну",
           allowClear: true
         });
+        $('input[type="file"]').on('change', function(e){
+            $('.file-name').text(e.target.value.split('\\').pop())
+        })
       });
     
 // function formatState (state) {
