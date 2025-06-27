@@ -330,6 +330,9 @@ input[type="number"]::-webkit-inner-spin-button {
       position: relative;
       margin-bottom: 9px;
       cursor: pointer;
+      &:hover{
+        background-color: rgba(0,123,255, .2);
+      }
       .file-name {
         font-family: 'Inter';
         font-size: 0.9rem;
@@ -370,6 +373,12 @@ input[type="number"]::-webkit-inner-spin-button {
       border: 1px solid #D9D9D9;
       border-radius: 4px;
       background: url('../images/Trash.svg') 50% 50% no-repeat;
+      transition: all .3s ease;
+      &:hover {
+        box-shadow: 0 0 4px rgba(229, 13, 13, 0.6);
+        background-color: rgba(229, 13, 13, 0.4);
+        border-color: transparent;
+      }
     }
   }
 }
@@ -378,3 +387,14 @@ input[type="number"]::-webkit-inner-spin-button {
   line-height: 2rem; 
   letter-spacing: -0.025rem;
 }
+
+input[type="file"] {
+  appearance: none;
+  -webkit-appearance: none; 
+  cursor: pointer;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  visibility: hidden;
+}
+  
