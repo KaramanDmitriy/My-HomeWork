@@ -318,6 +318,11 @@ input[type="number"]::-webkit-inner-spin-button {
     height: 80px;
     border: 50%;
     overflow: hidden;
+    transition: all 2.8s ease;
+    &:hover {
+      scale: 1.35;
+      rotate: 360deg;
+    }
   }
   .file-block {
     .fake-file {
@@ -330,6 +335,7 @@ input[type="number"]::-webkit-inner-spin-button {
       position: relative;
       margin-bottom: 9px;
       cursor: pointer;
+      transition: all .3s ease;
       &:hover{
         background-color: rgba(0,123,255, .2);
       }
