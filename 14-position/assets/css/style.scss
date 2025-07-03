@@ -251,7 +251,7 @@ background-color: orange;
   
   /* Do an horizontal flip when you move the mouse over the flip box container */
   .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+    transform: rotateX(180deg);
   }
   
   /* Position the front and back side */
@@ -266,7 +266,7 @@ background-color: orange;
   
   /* Style the back side */
   .flip-card-back {
-    transform: rotateY(180deg);
+    transform: rotateX(180deg);
   }
   .using {
     padding-top: 100px;
