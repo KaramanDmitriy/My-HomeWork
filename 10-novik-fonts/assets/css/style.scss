@@ -24,7 +24,7 @@ body{
     color: #070707;
 }
 .container {
-    width: min(90%, 945px);
+    width: min(86%, 945px);
     margin-inline: auto;
 }
 .grey {
@@ -38,13 +38,7 @@ body{
     display: flex;
     justify-content: space-between;
     text-align: center;
-    // font-size: 0;
 }
-// .header-nav-list ul li {
-//     font-size: 18px;
-//     display: inline-block;
-//     margin: 0 20px;
-// }
 .header-nav-list ul li a{
     color: #828282;
     letter-spacing: 0.36px;
@@ -91,6 +85,7 @@ body{
     }
 }
 .novik-photo {
+    height: 387px;
     margin-bottom: 104px;
 }
 .about-title{
@@ -124,15 +119,22 @@ body{
     text-align: center;
 }
 .skills-items{
-    display: flex;
-    justify-content: space-between;
-    font-size: 0; 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    @media screen and (max-width: 920px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 440px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 .skills-items li {
     display: inline-block;
     text-align: center;
     width: 170px;
     height: 230px;
+    margin: 0 auto;
     position: relative;
     font-size: 14px;
 }
@@ -177,9 +179,8 @@ body{
 .portfolio-list li a {
     display: block;
     text-align: center;
-    // width: min(90%, 260px);
     margin: 0 auto;
-    margin-top: 24px;
+    margin-top: 38px;
     margin-bottom: 98px;
     transition: text-decoration .3s ease;
 }
@@ -237,6 +238,9 @@ body{
     text-align: center;
     width: min(90%, 342px);
     margin: 0 auto;
+    a {
+        display:inline-block;
+    }
 }
 .socail-list li:last-child {
     margin-bottom: 45px;
@@ -262,6 +266,132 @@ body{
     margin: 0 auto;
     img {
         object-fit: contain;
-        // object-position: center top;
+    }
+}
+.burger {
+    display: none;
+}
+.novik-photo-min {
+    display: none;
+}
+  
+@media screen and (max-width: 480px) {
+    header {
+        display: none;
+    }
+    .title-wrapper {
+        position: relative;
+        flex-direction: column;
+        align-items: start;
+        .home-title {
+            padding-top: 55px;
+            margin-bottom: 18px;
+        }
+        .center-description {
+            margin-bottom: 42px;
+            top: 0;
+            right: -1px;
+        }
+        .burger {
+            cursor: pointer;
+            display: block;
+            position: absolute;
+            top: 27%;
+            right: 1%;
+            width: 33px;
+            height: 3.8px;
+            background-color: black;
+            transition: 0.3s ease;
+        }
+          
+        .burger::before,
+        .burger::after {
+            content: "";
+            position: absolute;
+            width: 33px;
+            height: 3.8px;
+            background-color: black;
+            transition: 0.3s ease;
+        }
+          
+        .burger::before {
+            top: -7.7px; /* Відстань до верхньої лінії */
+        }
+          
+        .burger::after {
+            top: 7.7px; /* Відстань до нижньої лінії */
+        }
+        .lang {
+            display: none;
+        }
+    }
+    .novik-photo {
+        display: none;
+    }
+    .novik-photo-min {
+        display: block;
+        height: 478px;
+        margin-bottom: 84px;
+    }
+    .about-title {
+        padding-top: 74px;
+        margin-bottom: 34px;
+    }
+    .about-contant p {
+        margin-bottom: 9px;
+    }
+    .skills-items {
+        gap: 57px;
+    }
+    .skills-title {
+        padding-top: 78px;
+        margin-bottom: 38px;
+    }
+    .skills-subtitle {
+        margin-bottom: 76px;
+    }
+    .skills-items li .skills-img {
+        margin-bottom: 20px;
+    }
+    .skills-stars img {
+        height: 20px;
+        width: 20px;
+    }
+    .skills-items li p {
+        margin: 0 auto 37px;
+    }
+    #skills {
+        padding-bottom: 78px;
+    }  
+    .contacts-title, .portfolio-title {
+        padding-top: 74px;
+        margin-bottom: 72px;
+    }
+    .portfolio-list img {
+        height: 164px;
+    }
+    .portfolio-list li a {
+        margin-bottom: 88px;
+    }
+    #portfolio {
+        padding-bottom: 85px;
+    }
+    .contacts-title{
+        padding-top: 70px;
+        margin-bottom: 31px;
+    }
+    .contacts-subtitle {
+        margin-bottom: 45px;
+    }
+    .contacts-button-msg {
+        width: 100%;
+        margin-bottom: 47px;
+    }
+    .socail-list {
+        width: 98%;
+    }
+    .contacts-like-me {
+        font-size: 18px; 
+        width: 100%;
     }
 }
