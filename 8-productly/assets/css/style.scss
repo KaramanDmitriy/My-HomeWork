@@ -14,6 +14,9 @@ ul, ol {
 }
 img {
     vertical-align: top;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 a, button {
     transition: all .3s ease-in;
@@ -66,6 +69,7 @@ body {
 .hero {
     border-color: $bg-color-hero;
 }
+
 header{
     padding: 17px 0;
     .container {
@@ -107,6 +111,7 @@ header{
         display: flex;
         flex-direction: column;
         height: 300px;
+        width: 35%;
         justify-content: space-between;
               
         h1 {
@@ -189,6 +194,17 @@ footer .container {
     font-weight: 700;
     line-height: 30px;
     color: $h1-color;
+    position: relative;
+    .logo{
+        transform: translateY(-44%);
+        a {
+            max-width: 200px;
+            img {
+                object-fit: contain;
+            }
+        }
+    }
+     
     ul {
         padding-top: 30px;
         li {
@@ -240,5 +256,215 @@ footer .container {
         }
     }
 }
-    
+.burger {
+    display: none;
+}
+@media screen and (max-width: 1050px) {
+    header {
+        .container {
+            justify-content: space-between;
+        }
+        .main-menu {
+            display: none;
+        }
+        .burger {
+            cursor: pointer;
+            display: block;
+            position: relative;
+            top: 27%;
+            // right: 1%;
+            width: 33px;
+            height: 3.8px;
+            background-color: black;
+            transition: 0.3s ease;
+        }
+          
+        .burger::before,
+        .burger::after {
+            content: "";
+            position: absolute;
+            width: 33px;
+            height: 3.8px;
+            background-color: black;
+            transition: 0.3s ease;
+        }
+          
+        .burger::before {
+            top: -7.7px; /* Відстань до верхньої лінії */
+        }
+          
+        .burger::after {
+            top: 7.7px; /* Відстань до нижньої лінії */
+        }
+    }
+    .hero .container {
+        padding: 20px 0 80px;
+        flex-direction:column-reverse;
+        gap: 10px;
+        .hero-content-wrapp {
+            text-align: center;
+            width: 65%;
+            button.btn-hero {
+                width: 100%;
+            }
+        }
+        
+    }
+    .features-list {
+        flex-wrap: wrap;
+        gap: 10px;
+        li {
+            width: 45%;
+            text-align: center;
+            margin-bottom: 15px;
+            .features-item-img {
+                margin: 0 auto 20px;
 
+            }
+        }
+    }
+    footer .container {
+        flex-wrap: wrap;
+        .logo {
+            width: 100%;
+            text-align: center;
+            img {
+                width: 50%;
+                margin: 0 auto;
+            }
+        }
+    }
+    
+}
+@media screen and (max-width: 780px) {
+    footer {
+        border-top: none;
+    }
+    footer .container {
+        justify-content: center;
+        gap: 50px;
+        .footer-phone {
+            width: 100%;
+            form {
+                width: 60%;
+                margin: 0 auto;
+            }
+        }
+    }
+    
+}
+@media screen and (max-width: 600px) {
+    header {
+        .logo {
+            padding-top: 10px;
+            width: 130px;
+        }
+        button.btn,
+        .btn.btn-secondary {
+            padding: 7px;
+            font-size: 12px;
+        }
+        .burger {
+            scale: 0.9;
+        }
+    }
+    .hero .container .hero-content-wrapp h1 {
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 20px;
+    }
+    .hero .container .hero-content-wrapp p {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 14px;
+    }
+    .features-list {
+        margin-bottom: 84px;
+    }
+ 
+    footer .container {
+        .logo {
+            img {
+                width: 80%;
+            }
+        }
+        justify-content: center;
+        gap: 30px;
+        .footer-phone {
+            width: 100%;
+            form {
+                padding: 5%;
+                border: 1px solid #333;
+                border-radius: 5px;
+                width: 80%;
+                height: 260px;
+                label {
+                    margin-bottom: 20px;
+                }
+                input {
+                    margin-bottom: 20px;
+                }
+                .btn-wrapper {
+                    margin: 0 auto;
+                    width: 100%;
+                    
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+@media screen and (max-width: 480px) {
+    .features-list{
+        margin-bottom: 35px;
+        li{
+            width: 100%;
+        }
+    }
+    .buttons-group {
+        gap: 8px;
+    }
+     
+    
+}
+@media screen and (max-width: 400px) {
+    header {
+        .logo {
+            width: 120px;
+        }
+        button.btn,
+        .btn.btn-secondary {
+            padding: 5px;
+        }
+        .burger {
+            scale: 0.7;
+        }
+    }
+    footer .container .footer-phone form input {
+        font-size: 16px;
+    }
+    footer .container ul li a {
+        font-size: 16px;
+        line-height: 25px;
+    }
+    footer .container .footer-phone form {
+        width: 90%;
+    }
+    footer .container .logo img {
+        width: 90%;
+    }
+    .hero .container .hero-content-wrapp p {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 18px;
+    }
+    .hero .container .hero-content-wrapp h1 {
+        font-size: 32px;
+    }
+    .features .container h2 {
+        font-style: 30px;
+    }
+}
