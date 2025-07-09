@@ -9,12 +9,12 @@
 </head>
 
 <body>
-  <div class="overlay close"></div>
-  <div class="burger-menu close">
+  <div class="overlay"></div>
+  <div class="burger-menu">
     <div class="burger-menu-top">
       <a class="logo-wrap" href="#"><img src="assets/images/Logo.svg" alt="Logo"></a>
       <div class="btn-close">
-        <button type="button" onClick="closeMenu()"></button>
+        <button type="button" onClick="toogleMenu()"></button>
       </div>
     </div>
     <nav>
@@ -65,7 +65,7 @@
             <button type="button"><img src="assets/images/search.svg" alt="search"></button>
           </div>
           <div class="burger">
-            <button type="button" onClick="openMenu()" class="burger-btn">
+            <button type="button" onClick="toogleMenu()" class="burger-btn">
               <span></span>
             </button>
           </div>
@@ -123,34 +123,40 @@
               <div class="post-img">
                 <img src="assets/images/lamp.jpg" alt="lamp">
               </div>
-              <div class="post-data">
-                <div class="item">Interface Design</div>
-                <div class="item">8 June, 2020</div>
+              <div class="latest-content-wrapper">
+                <div class="post-data">
+                  <div class="item">Interface Design</div>
+                  <div class="item">8 June, 2020</div>
+                </div>
+                <h3>UX traffic light colours</h3>
+                <p>UI has to make a huge visual difference between warning, an alert and a success.</p>
               </div>
-              <h3>UX traffic light colours</h3>
-              <p>UI has to make a huge visual difference between warning, an alert and a success.</p>
             </li>
             <li>
               <div class="post-img">
                 <img src="assets/images/pic-arrow-left.jpg" alt="pic-arrow-left">
               </div>
-              <div class="post-data">
-                <div class="item">Technology</div>
-                <div class="item">6 May, 2020</div>
+              <div class="latest-content-wrapper">
+                <div class="post-data">
+                  <div class="item">Technology</div>
+                  <div class="item">6 May, 2020</div>
+                </div>
+                <h3>Using UX Design to Build a Sustainable Future</h3>
+                <p>UI has to make a huge visual difference between warning, an alert and a success.</p>
               </div>
-              <h3>Using UX Design to Build a Sustainable Future</h3>
-              <p>UI has to make a huge visual difference between warning, an alert and a success.</p>
             </li>
             <li>
               <div class="post-img">
                 <img src="assets/images/house.jpg" alt="house">
               </div>
-              <div class="post-data">
-                <div class="item">Visual Design</div>
-                <div class="item">8 June, 2020</div>
+              <div class="latest-content-wrapper">
+                <div class="post-data">
+                  <div class="item">Visual Design</div>
+                  <div class="item">8 June, 2020</div>
+                </div>
+                <h3>Creativity vs. UX</h3>
+                <p>Is it possible to create a delightful user experience without following best UX practices?</p>
               </div>
-              <h3>Creativity vs. UX</h3>
-              <p>Is it possible to create a delightful user experience without following best UX practices?</p>
             </li>
           </ul>
         </div>
@@ -252,14 +258,8 @@
     </footer>
   </div>
   <script>
-    function openMenu() {
-      document.querySelector('.overlay').classList.remove('close'),
-        document.querySelector('.burger-menu').classList.remove('close')
-    }
-
-    function closeMenu() {
-      document.querySelector('.overlay').classList.add('close'),
-        document.querySelector('.burger-menu').classList.add('close')
+    function toogleMenu() {
+      document.body.classList.toggle('open-menu')
     }
   </script>
 </body>
