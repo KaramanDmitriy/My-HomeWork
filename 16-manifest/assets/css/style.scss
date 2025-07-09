@@ -491,11 +491,11 @@ footer {
   left: 0;
   width: 300px;
   height: 100dvh;
-  z-index: 102;
   background-color:#fff;
   transform: translateX(0);
   overflow: visible;
   transition: all .8s ease;
+  z-index: 101;
   nav {
     padding: 0 10px;
     li a {
@@ -543,30 +543,36 @@ footer {
     margin-right: 10px;
     width: 50px;
     height: 50px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    position: relative;
+    top: -23px;
+    right: -4px;
     z-index: 102;
+    background-color: transparent;
     button {
       width: 100%;
       height: 100%;
+      // z-index: 102;
+      cursor: pointer;
+      &::after, &::before {
+        content: "";
+        position: absolute;
+        top: 24px;
+        width: 100%;
+        height: 2px;
+        background-color: $text-color;
+        cursor: pointer;
+        z-index: 101;
+      }
+      &::after {
+        left: 0;
+        rotate: 45deg;
+      }
+      &::before {
+        right: 0;
+        rotate: -45deg;
+      }
     }
-    &::after, &::before {
-      content: "";
-      position: absolute;
-      top: 24px;
-      width: 100%;
-      height: 2px;
-      background-color: $text-color;
-    }
-    &::after {
-      left: 0;
-      rotate: 45deg;
-    }
-    &::before {
-      right: 0;
-      rotate: -45deg;
-    }
+    
   }
 }
 .close {
