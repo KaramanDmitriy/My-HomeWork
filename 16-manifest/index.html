@@ -9,6 +9,34 @@
 </head>
 
 <body>
+  <div class="overlay close"></div>
+  <div class="burger-menu close">
+    <div class="burger-menu-top">
+      <a class="logo-wrap" href="#"><img src="assets/images/Logo.svg" alt="Logo"></a>
+      <div class="btn-close">
+        <button type="button" onClick="closeMenu()"></button>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">home</a>
+        </li>
+        <li>
+          <a href="#">about</a>
+        </li>
+        <li>
+          <a href="#">works</a>
+        </li>
+        <li>
+          <a href="#">blog</a>
+        </li>
+        <li>
+          <a href="#">contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
   <div class="page-wrapper">
     <header>
       <div class="container">
@@ -37,7 +65,7 @@
             <button type="button"><img src="assets/images/search.svg" alt="search"></button>
           </div>
           <div class="burger">
-            <button type="button" class="burger-btn">
+            <button type="button" onClick="openMenu()" class="burger-btn">
               <span></span>
             </button>
           </div>
@@ -84,7 +112,7 @@
       </section>
       <section class="latest-post">
         <div class="container">
-          <div class="latest-post-top">
+          <div class="post-top">
             <h2>
               Latest Posts
             </h2>
@@ -127,9 +155,113 @@
           </ul>
         </div>
       </section>
+      <section class="popular">
+        <div class="container">
+          <div class="post-top">
+            <h2>
+              The Most Popular
+            </h2>
+            <a href="#">View All <img src="assets/images/Arrow-right.svg" alt="arrow"></a>
+          </div>
+          <ul class="popular-list">
+            <li>
+              <div class="popular-img">
+                <img src="assets/images/orange-lamp.jpg" alt="orange-lamp">
+              </div>
+              <div class="post-data">
+                <div class="item">Interface Design</div>
+                <div class="item">8 June, 2020</div>
+              </div>
+              <h3>Mentorship Match — How a simple LinkedIn feature can boost diversity</h3>
+              <p>LinkedIn is on a clear mission to make professionals more successful by connecting the global workforce
+                and as we learned — diversity and success go hand in hand</p>
+            </li>
+            <li>
+              <div class="popular-img">
+                <img src="assets/images/pic-arrow-right.jpg" alt="orange-lamp">
+              </div>
+              <div class="post-data">
+                <div class="item">Visual Design</div>
+                <div class="item">8 June, 2020</div>
+              </div>
+              <h3>Creativity vs. UX</h3>
+              <p>Is it possible to create a delightful user experience without following best UX practices?</p>
+            </li>
+          </ul>
+        </div>
+        <div class="load-more-btn">
+          <button type="button">Load More</button>
+        </div>
+      </section>
+      <div class="information">
+        <div class="container">
+          <div class="info-item">
+            Full-time UI/UX designer<br>
+            Head of Design at VeronaLabs.com
+            <a href="#"><img src="assets/images/Arrow-right.svg" alt="arrow"></a>
+          </div>
+          <div class="info-item">
+            <p>We work with clients around the world from our headquarters in Charleston, South Carolina.</p>
+            <p>We focus on naming, branding, brand narratives, website design and development, and brand experiences.
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
-    <footer>150</footer>
+    <footer>
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-left">
+            <div class="footer-title-text">
+              Need a project?
+            </div>
+            <a href="tel:+2395550108">(239) 555-0108</a>
+            <a href="mailto:tanya.hill@example.com">tanya.hill@example.com</a>
+          </div>
+          <div class="footer-right">
+            <ul class="footer-social-list">
+              <li><a href="#">
+                  <svg class="icon">
+                    <use xlink:href="assets/images/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li><a href="#">
+                  <svg class="icon">
+                    <use xlink:href="assets/images/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li><a href="#">
+                  <svg class="icon">
+                    <use xlink:href="assets/images/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li><a href="#">
+                  <svg class="icon">
+                    <use xlink:href="assets/images/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a class="copyright" href="#">© Copyright Manifest Theme. Allrights reserved</a>
+      </div>
+    </footer>
   </div>
+  <script>
+    function openMenu() {
+      document.querySelector('.overlay').classList.remove('close'),
+        document.querySelector('.burger-menu').classList.remove('close')
+    }
+
+    function closeMenu() {
+      document.querySelector('.overlay').classList.add('close'),
+        document.querySelector('.burger-menu').classList.add('close')
+    }
+  </script>
 </body>
 
 </html>
