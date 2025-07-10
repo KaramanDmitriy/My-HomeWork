@@ -164,8 +164,10 @@ header {
 .presentation {
   height: 600px;
   width: 100%;
-  background: url('../images/First-Screen.jpg') center center no-repeat;
+  background-image: url('../images/first-screen.jpg');
+  background-position: center center;
   background-size: cover;
+  background-repeat: no-repeat;
   h1 {
     color: $text-dark;
     font-family: "Red Hat Display";
@@ -173,7 +175,7 @@ header {
     font-weight: 600;
     line-height: 4rem;
     letter-spacing: 0.15rem;
-    padding: 100px 0 380px;
+    padding-top: 100px;
     margin-left: 9.37%;
     max-width: 770px;
   }
@@ -217,11 +219,15 @@ header {
       .subtitle {
         margin-bottom: 50px;
       }
-      p a {
+      .long-arrow{
         
         display: inline-block;
         width: 23px;
         transform: translate(33%, 33%);
+        transition: all .3s ease;
+        &:hover {
+          transform: translate(60%, 33%) scaleX(1.5);
+        }
       }
       h3 {
         color: $text-dark;
@@ -235,6 +241,20 @@ header {
       p {
         margin-bottom: 85px;
       }
+    }
+  }
+}
+.long-arrow-new {
+  img {
+    transform: translate(33%, 33%);
+    width: 23px;
+    transition: all .3s ease;
+  }
+  // display: inline-block;
+  &:hover {
+    color: $text-dark;
+    img {
+      transform: translate(60%, 60%) scaleX(1.5);
     }
   }
 }
@@ -275,6 +295,7 @@ header {
   gap: 30px;
   li {
     .post-img {
+      // aspect-ratio: 37/26;
       height: 260px;
       margin-bottom: 25px;
     }
@@ -587,11 +608,99 @@ footer {
     visibility: visible;
   } 
 }
+
 @media screen and (max-width: 880px) {
-  .header-right nav {
-    display: none;
+  header .container .header-right {
+    gap: 40px;
+    nav {
+      display: none;
+    }
   }
+  
   .burger {
     display: block;
+  }
+  .presentation {
+    height: 320px;
+    aspect-ratio: 16/9;
+    background-image: url('../images/bg-image-medium.jpg')!important;
+    h1 {
+      padding-top: 30px;
+      font-size: 2.25rem;
+      line-height: 3.125rem;
+      letter-spacing: 0.1125rem;
+      margin-left: 4.43%;
+      max-width: 550px;
+    }
+  }
+  .blog {
+    h2 {
+      padding-top: 70px;
+    }
+    .blog-items {
+      margin-bottom: 50px;
+      .item {
+        max-height: 320px;
+        .sup-title  {
+          padding-top: 0;
+          margin-bottom: 15px;
+        }
+        .subtitle {
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+  .latest-post {
+    padding: 70px 0;
+    
+  }
+  .post-list {
+    grid-template-columns: 1fr;
+    li {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      .post-img {
+        width: 50%;
+        height: 240px;
+      }
+      .latest-content-wrapper {
+        width: 50%;
+      }
+    }
+  }
+  .popular-list li h3 {
+    font-size: 1.375rem;
+    letter-spacing: 0.1375rem;
+  }
+  .information {
+    padding: 70px 0;
+    .container {
+      flex-direction: column;
+      .info-item {
+        width: 100%;
+        p {
+          text-align: right;
+          margin-bottom: 15px;
+        }
+      }
+      
+    }
+  }
+  footer {
+    .footer-main {
+      padding-top: 50px;
+      margin-bottom: 50px;
+      flex-direction: column;
+      .footer-left {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .footer-social-list {
+        justify-content: center;
+      }
+    }
   }
 }
