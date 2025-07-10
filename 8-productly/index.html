@@ -12,6 +12,17 @@
 </head>
 
 <body>
+    <div class="overlay"></div>
+    <div class="mobile-menu">
+        <nav>
+            <ul class="mobile-menu-list">
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Customers</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Resources</a></li>
+            </ul>
+        </nav>
+    </div>
     <header>
         <div class="container">
             <div class="logo">
@@ -29,7 +40,7 @@
                 <button class="btn btn-secondary">Sign In</button>
                 <button class="btn">Sign Up</button>
             </div>
-            <div class="burger"></div>
+            <div id="burger-menu" onclick="toggleMenu()" class="burger"></div>
         </div>
     </header>
     <main>
@@ -109,6 +120,11 @@
             </div>
         </div>
     </footer>
+    <script>
+        function toggleMenu() {
+            document.body.classList.toggle('toogleMenu');
+        }
+    </script>
 </body>
 
 </html>
