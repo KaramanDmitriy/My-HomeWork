@@ -70,7 +70,6 @@ body {
 .hero {
     border-color: $bg-color-hero;
 }
-
 header{
     position: relative;
     padding: 17px 0;
@@ -101,7 +100,6 @@ header{
     display: flex;
     gap: 32px;
 }
-
 .hero .container {
     display: flex;
     align-items: center;
@@ -206,7 +204,6 @@ footer .container {
             }
         }
     }
-     
     ul {
         padding-top: 30px;
         li {
@@ -228,7 +225,6 @@ footer .container {
                 }
             }
         }
-        
     }
     .footer-phone {
         width: 340px;
@@ -304,7 +300,6 @@ footer .container {
     cursor: pointer;
     position: relative;
     top: 27%;
-    // right: 1%;
     width: 33px;
     height: 33px;
     background-color: transparent;
@@ -354,7 +349,6 @@ footer .container {
     visibility: hidden;
     transition: all 0.3s ease;
 }
-
 .mobile-menu {
     position: fixed;
     transform: translateY(-130%);
@@ -366,7 +360,6 @@ footer .container {
     background-color: #fff;
     border-radius: 0 0 20px 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
     z-index: 101;
     display: flex;
     flex-direction: column;
@@ -402,24 +395,6 @@ footer .container {
         .burger {
             display: block;
         }
-          
-        // .burger::before,
-        // .burger::after {
-        //     content: "";
-        //     position: absolute;
-        //     width: 33px;
-        //     height: 3.8px;
-        //     background-color: black;
-        //     transition: 0.3s ease;
-        // }
-          
-        // .burger::before {
-        //     top: -7.7px; /* Відстань до верхньої лінії */
-        // }
-          
-        // .burger::after {
-        //     top: 7.7px; /* Відстань до нижньої лінії */
-        // }
     }
     .hero .container {
         padding: 20px 0 80px;
@@ -458,9 +433,7 @@ footer .container {
             }
         }
     }
-    
 }
-
 @media screen and (max-width: 780px) {
     footer {
         border-top: none;
@@ -476,7 +449,6 @@ footer .container {
             }
         }
     }
-    
 }
 @media screen and (max-width: 600px) {
     header {
@@ -506,7 +478,6 @@ footer .container {
     .features-list {
         margin-bottom: 84px;
     }
- 
     footer .container {
         .logo {
             img {
@@ -541,7 +512,6 @@ footer .container {
         }
     }   
 }
-
 @media screen and (max-width: 480px) {
     .features-list{
         margin-bottom: 35px;
@@ -552,8 +522,6 @@ footer .container {
     .buttons-group {
         gap: 8px;
     }
-     
-    
 }
 @media screen and (max-width: 400px) {
     header {
