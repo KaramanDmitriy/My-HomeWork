@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="assets/css/animate.min.css">
   <link rel="stylesheet" href="assets/css/style.min.css">
 </head>
 
@@ -83,11 +84,11 @@
         <h1>Manifest is a newborn theme.
           Clean, simple and fast.</h1>
       </div>
-      <section class="blog">
+      <section class="blog ">
         <div class="container">
           <h2>Blog</h2>
           <div class="blog-items">
-            <div class="item">
+            <div class="item wow animate__slideInLeft" data-wow-duration="2s">
               <picture>
                 <source media="(width <= 460px)" data-srcset="assets/images/pic-arrow-left-small.jpg" />
                 <source media="(width <= 880px)" data-srcset="assets/images/pic-arrow-left-medium.jpg" />
@@ -95,7 +96,7 @@
                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" />
               </picture>
             </div>
-            <div class="item">
+            <div class="item wow animate__slideInRight" data-wow-duration="2s">
               <div class="item-content-wrap">
                 <div class="sup-title">Technology, Interface Design</div>
                 <h3>Using UX Design to Build a Sustainable Future</h3>
@@ -109,7 +110,7 @@
             </div>
           </div>
           <div class="blog-items reverse">
-            <div class="item">
+            <div class="item wow animate__slideInLeft" data-wow-duration="2s">
               <div class="item-content-wrap--reverse">
                 <div class="sup-title">Technology, Interface Design</div>
                 <h3>Using UX Design to Build a Sustainable Future</h3>
@@ -121,7 +122,7 @@
                       alt="arrow"></a></p>
               </div>
             </div>
-            <div class="item">
+            <div class="item wow animate__slideInRight" data-wow-duration="2s">
               <picture>
                 <source media="(width <= 500px)" data-srcset="assets/images/blog-image-small.jpg" />
                 <source media="(width <= 880px)" data-srcset="assets/images/blog-image-medium.jpg" />
@@ -132,7 +133,7 @@
           </div>
         </div>
       </section>
-      <section class="latest-post">
+      <section class="latest-post wow animate__zoomInDown" data-wow-duration="2s">
         <div class="container">
           <div class="post-top">
             <h2>
@@ -202,7 +203,7 @@
       </section>
       <section class="popular">
         <div class="container">
-          <div class="post-top">
+          <div class="post-top animate__animated wow animate__wobble">
             <h2>
               The Most Popular
             </h2>
@@ -246,7 +247,7 @@
             </li>
           </ul>
         </div>
-        <div class="load-more-btn">
+        <div class="load-more-btn wow animate__lightSpeedInLeft" data-wow-duration="2s">
           <button type="button">Load More</button>
         </div>
       </section>
@@ -311,11 +312,17 @@
     </footer>
   </div>
   <script src="assets/js/lazyload.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
   <script>
     function toogleMenu() {
       document.body.classList.toggle('open-menu')
     }
     const lazyLoadInstance = new LazyLoad()
+
+    wow = new WOW({
+      animateClass: 'animate__animated',
+    })
+    wow.init();
   </script>
 </body>
 
