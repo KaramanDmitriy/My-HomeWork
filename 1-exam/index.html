@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/css/animate.min.css">
+  <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+
+<body>
+  <div class="overlay"></div>
+  <div class="burger-menu">
+  </div>
+  <div class="page-wrapper">
+    <header>
+
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+  </div>
+  <script src="assets/js/lazyload.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script>
+    function toogleMenu() {
+      document.body.classList.toggle('open-menu')
+    }
+    const lazyLoadInstance = new LazyLoad()
+
+    wow = new WOW({
+      animateClass: 'animate__animated',
+    })
+    wow.init();
+  </script>
+</body>
+
+</html>
