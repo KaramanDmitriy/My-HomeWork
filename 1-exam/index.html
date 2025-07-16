@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8">
@@ -21,10 +21,45 @@
   </div>
   <div class="page-wrapper">
     <header>
+      <div class="container">
+        <div class="header-left-block">
+          <div class="logo"><img src="assets/images/logo.svg" alt="logo"></div>
+          <label class="switch">
+            <input type="checkbox" class="checkbox"
+              onchange="document.documentElement.dataset.theme = this.checked ? 'dark' : '' ">
+            <div class="slider"></div>
+          </label>
+        </div>
+        <div class="header-right-blok">
+          <nav class="header-menu">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Use Cases</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Resources</a></li>
+            </ul>
+          </nav>
+          <div class="burger">
+            <button type="button" onClick="toogleMenu()" class="burger-btn">
+              <span></span>
+            </button>
+          </div>
+        </div>
 
+      </div>
     </header>
     <main>
-
+      <section class="hero">
+        <div class="container">
+          <hgroup>
+            <h1>A peer-to-peer stablecoin <em>clearinghouse</em> for the new economy</h1>
+            <p>We are bringing real solutions to the payments world by leveraging public blockchains.</p>
+            <a class="hero-link link" href="#">JOIN NOW</a>
+          </hgroup>
+        </div>
+      </section>
     </main>
     <footer>
 

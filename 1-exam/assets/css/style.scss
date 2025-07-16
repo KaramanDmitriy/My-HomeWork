@@ -1,4 +1,4 @@
-@import 'fonts';
+@use 'fonts.css' as *;
 *, *::before, *::after {
   padding: 0;
   margin: 0;
@@ -6,11 +6,17 @@
 }
 :root {
   --text-color: #262A3F;
+  --liner-bg-color: #F1897B;
+  --em-color: #85BBB1;
 }
 :root[data-theme='dark'] {
   --text-color: #fff;
+  --liner-bg-color: #53F3CD; 
+  --em-color: #689FF2;
 }
 $text-color: var(--text-color);
+$liner-bg-color: var(--liner-bg-color);
+$em-color: var(--em-color);
 
 ul, ol {
   list-style: none;
@@ -47,7 +53,10 @@ body {
   font-size: 1.125rem;
   font-weight: 300;
   line-height: 1.625rem;
-  opacity: 0.8;
+  // opacity: 0.8;
+  background: url('../images/main-bg-light-min.webp') no-repeat center top;
+  background-size: cover;
+  
 }
 
 .page-wrapper {
@@ -58,4 +67,168 @@ body {
   main {
     flex-grow: 1;
   }
+}
+.checkbox {
+  display: none;
+}
+
+.slider {
+  width: 60px;
+  height: 30px;
+  background-color: #BCC7C8;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border: 4px solid transparent;
+  transition: .3s;
+  box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.25) inset;
+  cursor: pointer;
+}
+
+.slider::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  transform: translateX(-30px);
+  border-radius: 20px;
+  transition: .3s;
+  box-shadow: 0 0 10px 3px rgb(0, 0, 0, 0.25);
+}
+
+.checkbox:checked ~ .slider::before {
+  transform: translateX(30px);
+  box-shadow: 0 0 10px 3px rgb(0, 0, 0, 0.25);
+}
+
+.checkbox:checked ~ .slider {
+  background-color: #273647;
+}
+
+.checkbox:active ~ .slider::before {
+  transform: translate(0);
+}
+header {
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.24) 24.1%, rgba(255, 255, 255, 0.00) 47.19%), rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(4.5px);
+  position: sticky;
+  top: 30px;
+  left: 0;
+  z-index: 10;
+  height: 80px;
+  padding: 24px 0;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    .header-menu ul {
+      display: flex;
+      align-items: end;
+      gap: 30px;
+      li {
+        a {
+          padding: 4px 0;
+          color: $text-color;
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 1.5rem; /* 171.429% */
+          letter-spacing: 0.056rem;
+          transition: all .6s ease;
+          position: relative;
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: $liner-bg-color;
+            opacity: 0.3;
+            transition: width .3s ease;
+          }
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+.header-left-block {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  .logo {
+    width: 108px;
+    height: 32px;
+  }
+}
+
+.burger {
+  display: none;
+}
+
+.hero {
+  .container {
+    padding-top: 260px;
+    hgroup {
+      max-width: 523px;
+      h1 {
+        font-family: "Playfair Display";
+        font-size: 2.75rem;
+        font-weight: 400;
+        line-height: 3.25rem; /* 118.182% */
+        margin-bottom: 20px;
+        em {
+          color: $em-color;
+        }
+      }
+      p {
+        max-width: 439px;
+        opacity: 0.8;
+        margin-bottom: 50px;
+      }
+    }
+    .link {
+      color: $liner-bg-color;
+      font-family: Lato;
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.25rem; /* 100% */
+      letter-spacing: 0.1rem;
+      text-transform: uppercase;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 10px;
+        width: 100%; 
+        height: 13px;
+        background-color: $liner-bg-color;
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+
+
+[data-theme='dark'] {
+  body {
+    background: url('../images/main-bg-dark-min.webp') no-repeat center top;
+    background-size: cover;
+  }
+  header {
+    background: linear-gradient(270deg, rgba(22, 25, 38, 0.50) 0%, rgba(22, 25, 38, 0.00) 24.1%, rgba(22, 25, 38, 0.00) 47.19%), rgba(22, 25, 38, 0.02);
+    backdrop-filter: blur(4.5px);
+  }
+  
 }
