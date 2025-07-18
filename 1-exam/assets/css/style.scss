@@ -234,7 +234,7 @@ header {
   transition: all .8s ease;
   z-index: 101;
   nav {
-    padding: 0 10px;
+    // padding: 0 10px;
     li a {
       text-align: center;
       display: block;
@@ -945,9 +945,6 @@ footer {
     &:nth-child(1) {
       flex-direction: column;
       align-items: center;
-      .footer-item {
-        // margin-bottom: 20px;
-      }
     }
   }
   .beautiful {
@@ -958,8 +955,8 @@ footer {
     .container .beautiful-content {
       position: static;
       width: 100%;
-      gap: 10px;
-      grid-template-columns: 35% 65%;
+      // gap: 4%;
+      grid-template-columns: 35% 60%;
       .inner-content {
         .link-wrap {
           transform: translateX(20%);
@@ -967,6 +964,7 @@ footer {
       }
       .title-content {
         align-items: start;
+        margin-bottom: 10px;
         .item-subtitle::after {
           display: none;
         }
@@ -975,7 +973,6 @@ footer {
         }
       }  
     }
-    
   }
   .possibilities {
     padding: 60px 0;
@@ -1033,8 +1030,59 @@ footer {
       margin: 0 auto;
     }
   }
-
-   
+}
+@media screen and (max-width: 680px) {
+  .beautiful .container .beautiful-content {
+    grid-template-columns: 94%;
+    gap: 20px;
+    .title-content {
+      flex-direction: row;
+    }
+  }
+  .beautiful .container .beautiful-content .title-content .item-title {
+    font-size: 2.1rem;
+    line-height: 3rem;
+    margin-bottom: 5px;
+  }
+  .beautiful.beautiful-second .beautiful-content {
+    flex-direction: column;
+  }
+  .beautiful.beautiful-second .inner-content {
+    // text-align: end;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .beautiful .container .beautiful-content .title-content {
+    align-items: flex-start;
+  }
+  .beautiful.beautiful-second .title-content-item {
+    text-align: center;
+  }
+  
+}
+@media screen and (max-width: 500px) {
+  .hero .container hgroup h1 {
+    font-size: 2.4rem;
+  }
+  .hero .container {
+    padding-top: 90px;
+  }
+  .beautiful .container .beautiful-content .title-content {
+    display: block;
+  }
+  .beautiful.beautiful-second .inner-content {
+    display: block;
+  }
+  .beautiful.beautiful-second .inner-content .link-wrapper {
+    position: static;
+    text-align: center;
+    border: none;
+    padding-top: 40px;
+  }
+  .client .container h2 {
+    padding-top: 74px;
+  }
+ 
 }
 
 [data-theme='dark'] {
