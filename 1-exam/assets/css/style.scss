@@ -130,7 +130,7 @@ header {
   position: sticky;
   top: 30px;
   left: 0;
-  z-index: 10;
+  z-index: 101;
   height: 80px;
   padding: 24px 0;
   .container {
@@ -186,11 +186,74 @@ header {
 
 .burger {
   display: none;
+  width: 34px;
+  height: 20px;
+  .burger-btn {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      height: 2px;
+      background-color: $liner-bg-color;
+      width: 100%;
+    }
+    &::after, &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $liner-bg-color;
+    }
+    &::after {
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+    &::before {
+      bottom: 0;
+      left: 0;
+    }
+  }
 }
-
+.burger-menu {
+  position: fixed;
+  top: 110px;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(270deg, rgba(255, 255, 255, .5) 0, rgba(255, 255, 255, .24) 24.1%, rgba(255, 255, 255, 0) 47.19%), rgba(255, 255, 255, .02);
+  backdrop-filter: blur(4.5px);
+  // transform: translateX(0);
+  transform: translateX(-100%);
+  // overflow: visible;
+  // overflow: hidden;
+  transition: all .8s ease;
+  z-index: 101;
+  nav {
+    padding: 0 10px;
+    li a {
+      text-align: center;
+      display: block;
+      color: $liner-bg-color;
+      font-family: "Red Hat Display";
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: 166%; /* 2.38625rem */
+      letter-spacing: 0.14375rem;
+      text-transform: uppercase;
+      &:hover {
+        filter: invert(100%);
+      }
+    }
+  }
+}
 .hero {
   .container {
-    padding-top: 260px;
+    padding-top: 180px;
     hgroup {
       max-width: 523px;
       h1 {
@@ -206,7 +269,7 @@ header {
       p {
         max-width: 439px;
         opacity: 0.8;
-        margin-bottom: 50px;
+        margin-bottom: 48px;
       }
     }
   }
@@ -248,7 +311,7 @@ header {
   }
 }
 .beautiful {
-  padding-top: 154px;
+  padding-top: 151px;
   .container {
     position: relative;
     display: flex;
@@ -265,6 +328,53 @@ header {
       right: 0;
       background-color: $beautiful-bg-color;
       padding: 45px 0;
+    }
+  }
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  background-color: rgba( 255, 255, 255, .8);
+  z-index: 100;
+  opacity: 0;
+  transition: all .8s ease;
+  visibility: hidden;
+}
+.open-menu {
+  .burger-menu{
+    transform: translateX(0);
+  }
+  .overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+  header .header-right-blok .burger {
+    button {
+      span {
+        background-color: transparent;
+      }
+      &::after, &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 2px;
+        background-color: $liner-bg-color;
+        cursor: pointer;
+        z-index: 101;
+      }
+      &::after {
+        left: 0;
+        rotate: 45deg;
+      }
+      &::before {
+        right: 0;
+        rotate: -45deg;
+      }
     }
   }
 }
@@ -320,7 +430,7 @@ header {
   }
 }
 .possibilities {
-  padding: 120px 0;
+  padding: 104px 0;
   .possibilities-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -392,7 +502,7 @@ header {
   }
 }
 .video-section {
-  padding: 120px 0;
+  padding: 124px 0;
   .container {
     width: min(90%, 970px);
   }
@@ -508,7 +618,7 @@ h2 {
 }
 .client {
   .container {
-    padding-bottom: 120px;
+    padding-bottom: 96px;
     border-bottom: 1px solid $border-color;
     > p {
       max-width: 400px;
@@ -580,7 +690,7 @@ p {
       width: 59.83%;
       padding-top: 81px;
       h2 {
-        margin-bottom: 29px;
+        margin-bottom: 23px;
       }
       p {
         max-width: 440px;
@@ -640,7 +750,7 @@ p {
   }
   input, textarea {
     width: 100%;
-    padding: 12px 20px;
+    padding: 12px 20px 6px;
     border: none;
     border-bottom: 1px solid $border-color;
     background-color: transparent;
@@ -653,6 +763,10 @@ p {
     height: 60px;
     resize: none;
     overflow: hidden;
+    &:focus {
+      outline: none;
+      border-color: $liner-bg-color;
+    }
   }
 }
 footer {
@@ -682,13 +796,204 @@ footer {
       font-weight: 400;
       line-height: 1.5rem; /* 171.429% */
       letter-spacing: 0.07rem;
+      &:hover {
+        color: $liner-bg-color;
+      }
     }
   }
 }
+@media screen and (max-width: 1300px) {
+  .quote-list {
+    grid-template-columns: 1fr;
+    li {
 
+      background-position: right center!important;
+      blockquote {
+        height: 400px;
+        p {
+          max-width: 44%;
+        }
+      }
+    }
+  }
+}
+  
 
+@media screen and (max-width: 1070px) {
+  .beautiful .container {
+    .beautiful-img {
+      width: 60%;
+    }
+    .beautiful-content {
+      width: 85%;
+    }
+  }
+  .video-section .video-wrapper {
+    height: 540px;
+  }
+  .beautiful.beautiful-second .inner-content .link-wrapper {
+    right: auto;
+    left: 0;
+    padding: 15px 40px;
+  }
+  .client .container {
+    padding-bottom: 80px;
+  }
+  
+  .possibilities .possibilities-list {
+    gap: 5px;
+  }
+  .quote p {
+    max-width: 560px;
+  }
+  .video-section {
+    padding: 80px 0;
+  }
+}
+@media screen and (max-width: 890px) {
+  .possibilities .possibilities-list li {
+    max-height: 240px;
+    h3 {
+      font-size: 2rem;
+      line-height: 2.5rem; /* 125% */
+      padding-top: 30px;
+    }
+  }
+  
 
-
+  .beautiful .container {
+    flex-direction: column;
+    align-items: center;
+    .beautiful-img {
+      width: 100%;
+      height: auto;
+    }
+    .beautiful-content {
+      width: 100%;
+      padding: 30px;
+    }
+  }
+  // .video-section .video-wrapper {
+  //   height: auto;
+  // }
+  .contact .container {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 60px;
+    .contact-form {
+      width: 80%;
+    }
+  }
+  footer .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .burger-menu nav li a {
+    font-size: 1.5rem;
+  
+  }
+}
+@media (max-width: 800px) {
+  header {
+    .header-right-blok {
+      .header-menu {
+        display: none;
+      }
+      .burger {
+        display: block;
+      }
+    }
+  }
+  .hero .container{
+    padding-top: 140px;
+  }
+  .beautiful {
+    padding-top: 100px;
+  }
+  .contact .container {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 80px;
+    .contact-form {
+      width: 60%;
+    }
+  }
+  .contact .link {
+    margin: 0 auto;
+  }
+  footer .container {
+    &:nth-child(1) {
+      flex-direction: column;
+      align-items: center;
+      .footer-item {
+        // margin-bottom: 20px;
+      }
+    }
+  }
+  .beautiful {
+    padding-top: 60px;
+    .beautiful-img {
+      display: none;
+    }
+    .container .beautiful-content {
+      position: static;
+      width: 100%;
+      gap: 10px;
+      grid-template-columns: 35% 65%;
+      .inner-content {
+        .link-wrap {
+          transform: translateX(20%);
+        }
+      }
+      .title-content {
+        align-items: start;
+        .item-subtitle::after {
+          display: none;
+        }
+        .item-title {
+          font-size: 2.8rem;
+        }
+      }  
+    }
+  }
+  .possibilities {
+    padding: 60px 0;
+    .possibilities-list {
+      grid-template-columns: 1fr;
+      li {
+        height: auto;
+        
+        hgroup {
+          padding-left: 0;
+          text-align: center;
+          
+          h3 {
+            font-size: 2rem;
+            line-height: 2.5rem; /* 125% */
+            padding-top: 30px;
+            max-width: 100%;
+          }
+          p {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+  .quote {
+    .container {
+      padding-right: 20px;
+      p {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  .video-section .video-wrapper {
+    height: 420px;
+  }
+}
 
 [data-theme='dark'] {
   body {
@@ -701,8 +1006,14 @@ footer {
     background: linear-gradient(270deg, rgba(22, 25, 38, 0.50) 0%, rgba(22, 25, 38, 0.00) 24.1%, rgba(22, 25, 38, 0.00) 47.19%), rgba(22, 25, 38, 0.02);
     backdrop-filter: blur(4.5px);
   }
+  .burger-menu {
+    background: linear-gradient(270deg, rgba(22, 25, 38, 0.50) 0%, rgba(22, 25, 38, 0.00) 24.1%, rgba(22, 25, 38, 0.00) 47.19%), rgba(22, 25, 38, 0.02);
+    backdrop-filter: blur(4.5px);
+  }
   blockquote p::after {
     background: url('../images/vector-dark-theme.svg') no-repeat center top;
   }
-  
+  .overlay {
+    background-color: rgba( 0, 0, 0, .8);
+  }
 }
