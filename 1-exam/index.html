@@ -249,7 +249,7 @@
               possible.</p>
           </div>
           <div class="contact-form">
-            <form action="#" method="post" class="contact-form">
+            <!-- <form action="#" method="post" class="contact-form">
               <fieldset>
                 <div class="form-group">
                   <label for="name">Your name</label>
@@ -267,6 +267,23 @@
                   <button type="submit">SEND REQUEST</button>
                 </div>
               </fieldset>
+            </form> -->
+            <form action="#" method="post" class="contact-form-items">
+              <label for="name">
+                <input type="text" name="name" id="name" placeholder="Name" required>
+                <span>Name</span>
+              </label>
+              <label for="email">
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <span>Email</span>
+              </label>
+              <label for="message">
+                <textarea rows="1" name="message" id="message" placeholder="message"></textarea>
+                <span>Tell more</span>
+              </label>
+              <div class="link">
+                <button type="submit">SEND REQUEST</button>
+              </div>
             </form>
           </div>
         </div>
