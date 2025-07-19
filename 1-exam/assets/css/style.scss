@@ -319,6 +319,7 @@ header {
     .beautiful-img {
       width: 48.72%;
       height: 670px;
+      
     }
     .beautiful-content {
       position: absolute;
@@ -1152,6 +1153,9 @@ footer {
   .quote {
     height: 360px;
   }
+}
+input:-internal-autofill-selected {
+  background-color: transparent;
 }
 
 [data-theme='dark'] {
