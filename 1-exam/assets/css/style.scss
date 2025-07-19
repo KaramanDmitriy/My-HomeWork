@@ -1058,6 +1058,36 @@ footer {
   .beautiful.beautiful-second .title-content-item {
     text-align: center;
   }
+  .quote {
+    height: 290px;
+    .container {
+      p {
+        padding-top: 35px;
+        line-height: 2.1rem;
+        font-size: 1.4rem;
+      }
+      .autor {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  .client {
+    .quote-list li {
+      height: 396px;
+      .quote-item p {
+        font-size: 1.4rem;
+      }
+    }
+    .video-section .video-wrapper {
+      height: 346px;
+    }
+  }
+  .contact .container {
+    padding-bottom: 66px;
+    .contact-content {
+      padding-top: 70px;
+    }
+  }
   
 }
 @media screen and (max-width: 500px) {
@@ -1082,7 +1112,46 @@ footer {
   .client .container h2 {
     padding-top: 74px;
   }
- 
+  .video-section .video-wrapper {
+    height: 280px;
+    padding: 10px 55px 10px 20px;
+    &::after {
+      left: 4px;
+    }
+    &::before {
+      right: 9px;
+    }
+  }
+  .quote {
+    height: 330px;
+    p {
+      margin-bottom: 25px;
+      &::after {
+        top: 13%;
+      }
+    }
+  }
+  header {
+    height: 60px;
+    padding: 14px 0;
+  }
+  .burger-menu {
+    top: 90px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .client .quote-list li {
+    height: 444px;
+    .quote-item p {
+      font-size: 1.26rem;
+    }
+  }
+  .video-section .video-wrapper {
+    height: 250px;
+  }
+  .quote {
+    height: 360px;
+  }
 }
 
 [data-theme='dark'] {
