@@ -5,7 +5,7 @@ function myName() {
 function indicateDate() {
     const myDate = prompt("Напиши свій рік народження: ")
     const myAge = new Date().getFullYear() - myDate
-    alert(`Твій вік, ${myAge}`)
+    alert(`Твій вік, ${myAge} років`)
 }
 function perymetr() {
     const storonaKvadrata = prompt("Вкажи сторону квадрата, а я тобі його периметр")
