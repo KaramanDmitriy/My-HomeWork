@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <header></header>
+    <main>
+      <div class="container">
+        <div class="card text-center mb-4">
+          <div class="card-header">
+            <b>Завдання 1</b>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Додавання 0,1 і 0,2</h5>
+            <div class="input-group flex-nowrap mb-2">
+              <span class="input-group-text" id="l1-num1">Число перше</span>
+              <input type="number" class="form-control less1-number1" value="0.1" aria-label="number1"
+                aria-describedby="l1-num1">
+            </div>
+            <div class="input-group flex-nowrap">
+              <span class="input-group-text" id="l1-num2">Число друге</span>
+              <input type="number" class="form-control less1-number2" value="0.2" aria-label="number2"
+                aria-describedby="l1-num2">
+            </div>
+            <button onclick="sumLesson1()" type="button">Результат</button>
+          </div>
+          <div class="card-footer text-body-secondary">
+            <output id="lesson1-result">Виводиться результат</output>
+          </div>
+        </div>
+        <div class="card text-center mb-4">
+          <div class="card-header">
+            <b>Завдання 2</b>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Додавання числа до строки</h5>
+            <div class="input-group flex-nowrap mb-2">
+              <span class="input-group-text" id="l2-num1">Число (строка)</span>
+              <input type="text" class="form-control less2-number1" value="1" aria-label="number1"
+                aria-describedby="l2-num1">
+            </div>
+            <div class="input-group flex-nowrap">
+              <span class="input-group-text" id="l2-num2">Число (число)</span>
+              <input type="number" class="form-control less2-number2" value="2" aria-label="number2"
+                aria-describedby="l2-num2">
+            </div>
+            <button onclick="sumLesson2()" type="button">Результат</button>
+          </div>
+          <div class="card-footer text-body-secondary">
+            <output id="lesson2-result">Виводиться результат</output>
+          </div>
+        </div>
+        <div class="card text-center mb-4">
+          <div class="card-header">
+            <b>Завдання 3</b>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Скільки файлів з фільмом вміститься на флешку заданого об'єму</h5>
+            <div class="input-group flex-nowrap mb-2">
+              <span class="input-group-text" id="l3-num1">Об'єм флешки в Гб</span>
+              <input type="number" class="form-control less3-number1" value="16" aria-label="l3-num1"
+                aria-describedby="l3-num1">
+            </div>
+            <div class="input-group flex-nowrap">
+              <span class="input-group-text" id="l3-num2">Об'єм файлу в Мб</span>
+              <input type="number" class="form-control less3-number2" value="820" aria-label="l3-num2"
+                aria-describedby="l3-num2">
+            </div>
+            <button onclick="sumLesson3()" type="button">Результат</button>
+          </div>
+          <div class="card-footer text-body-secondary">
+            <output id="lesson3-result">Скільки файлів вміститься на флешку</output>
+          </div>
+        </div>
+        <div class="card text-center mb-4">
+          <div class="card-header">
+            <b>Завдання 4</b>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Користувач вводить суму грошей в гаманці і ціну однієї шоколадки. Програма виводить
+              скільки шоколадок може купити користувач і скільки здачі у нього залишиться.</h5>
+            <div class="input-group flex-nowrap mb-2">
+              <span class="input-group-text" id="l4-num1">Скільки грн в гаманці</span>
+              <input type="number" class="form-control less4-number1" value="325" aria-label="l4-num1"
+                aria-describedby="l4-num1">
+            </div>
+            <div class="input-group flex-nowrap">
+              <span class="input-group-text" id="l4-num2">Ціна шоколадки</span>
+              <input type="number" class="form-control less4-number2" value="50" aria-label="l4-num2"
+                aria-describedby="l4-num2">
+            </div>
+            <button onclick="sumLesson4()" type="button">Результат</button>
+          </div>
+          <div class="card-footer text-body-secondary">
+            Скільки шоколадок можна купити:
+            <output id="lesson4-result1"></output>
+            Скільки коштів залишиться:
+            <output id="lesson4-result2"></output>
+          </div>
+        </div>
+        <div class="card text-center mb-4">
+          <div class="card-header">
+            <b>Завдання 5</b>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Запитай у користувача тризначне число і виведи його задом наперед. Для вирішення
+              завдання тобі знадобиться оператор % (залишок від ділення).</h5>
+            <div class="input-group flex-nowrap mb-2">
+              <span class="input-group-text" id="l5-num1">Введи 3-значне число</span>
+              <input type="number" class="form-control less5-number1" value="123" aria-label="l5-num1"
+                aria-describedby="l5-num1">
+            </div>
+
+            <button onclick="sumLesson5()" type="button">Результат</button>
+          </div>
+          <div class="card-footer text-body-secondary">
+            Реверс:
+            <output id="lesson5-result"></output>
+          </div>
+        </div>
+        <div class="card text-center mb-4">
+          <div class="card-header">
+            <b>Завдання 6</b>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Користувач вводить суму вкладу в банк на 2 місяці, з процентною ставкою депозиту 5%
+              річних. Вивести суму нарахованих відсотків.</h5>
+            <div class="input-group flex-nowrap mb-2">
+              <span class="input-group-text" id="l6-num1">Сума вкладу в банк ($)</span>
+              <input type="number" class="form-control less6-number1" value="1000" aria-label="l6-num1"
+                aria-describedby="l6-num1">
+            </div>
+            <div class="input-group flex-nowrap">
+              <span class="input-group-text" id="l6-num2">Річна ставка (%)</span>
+              <input type="number" class="form-control less6-number2" value="5" aria-label="l6-num2"
+                aria-describedby="l6-num2">
+            </div>
+            <div class="input-group flex-nowrap">
+              <span class="input-group-text" id="l6-num3">Кіл-ть місяців тримання депозиту</span>
+              <input type="number" class="form-control less6-number3" value="2" aria-label="l6-num3"
+                aria-describedby="l6-num3">
+            </div>
+
+            <button onclick="sumLesson6()" type="button">Результат</button>
+          </div>
+          <div class="card-footer text-body-secondary">
+            Сума прибутку:
+            <output id="lesson6-result"></output>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </div>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
