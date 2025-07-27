@@ -37,6 +37,5 @@ function sumLesson6() {
     const procentStavka = parseInt(document.querySelector('.less6-number2').value);
     const monthDeposit = parseInt(document.querySelector('.less6-number3').value);
     result = (sumVkladu*(procentStavka/100)/12*monthDeposit).toFixed(2);
-    console.log(result)
     document.getElementById('lesson6-result').textContent = result + " $";
 }
