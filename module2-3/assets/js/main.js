@@ -145,6 +145,60 @@ function discount() {
     const resultSum = num1 - num1*(discount/100)
     resultElement.textContent =  `${resultSum} до сплати, з врахуванням знижки ${discount} %`
 }
+function analyzeNumbers() {
+    let positives = 0;
+    let negatives = 0;
+    let zeros = 0;
+    let evens = 0;
+    let odds = 0;
+
+    for (let i = 1; i <= 10; i++) {
+        let input = prompt(`Залишилось цифр: ${11-i}:`);
+
+        
+        if (input === null) {
+            alert("Введення скасовано користувачем.");
+            break;
+        }
+
+        if (input.trim() === "" || isNaN(input)) {
+            alert("Це не число. Спробуйте ще раз.");
+            i--;
+            continue;
+        }
+
+
+        let num = parseFloat(input);
+
+        if (num > 0) {
+            positives++;
+        } else if (num < 0) {
+            negatives++;
+        } else {
+            zeros++;
+        }
+
+        if (Number.isInteger(num)) {
+            if (num % 2 === 0) {
+                evens++;
+            } else {
+                odds++;
+            }
+        }
+    }
+
+    const result = `
+        <b>Статистика:</b><br>
+        Додатніх: ${positives}<br>
+        Від’ємних: ${negatives}<br>
+        Нулів: ${zeros}<br>
+        Парних: ${evens}<br>
+        Непарних: ${odds}
+    `;
+
+    document.getElementById('lesson8-result').innerHTML = result;
+}
+
 
 
 
