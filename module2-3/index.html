@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <header></header>
+    <main>
+      <div class="container">
+        <h1>Цикли й умови</h1>
+        <div class="card text-center mb-4">
+          <div class="card-header">
+            <b>Завдання 1</b>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Запитай у користувача його вік і визначи, ким він є</h5>
+            <div class="input-group flex-nowrap mb-2">
+              <span class="input-group-text" id="l1-num1">Напиши свій вік:</span>
+              <input type="number" class="form-control less1-number1" value="16" aria-label="number1"
+                aria-describedby="l1-num1">
+            </div>
+            <!-- <div class="input-group flex-nowrap">
+              <span class="input-group-text" id="l1-num2">Число друге</span>
+              <input type="number" class="form-control less1-number2" value="0.2" aria-label="number2"
+                aria-describedby="l1-num2">
+            </div> -->
+            <button onclick="sumLesson1()" type="button">Результат</button>
+          </div>
+          <div class="card-footer text-body-secondary">
+            <output id="lesson1-result">Виводиться результат</output>
+          </div>
+        </div>
+        <div class="card text-center mb-4">
+          <div class="card-header">
+            <b>Завдання 2</b>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Запитай у користувача число від 0 до 9 і виведи йому спецсимвол, який розташований на
+              цій клавіші (1 !, 2 @, 3 # і т. д).</h5>
+            <div class="input-group flex-nowrap mb-2">
+              <span class="input-group-text" id="l2-num1">Напиши число выд 0 до 9</span>
+              <input type="number" class="form-control less2-number1" value="1" aria-label="number1"
+                aria-describedby="l2-num1">
+            </div>
+            <button onclick="specNumber()" type="button">Результат</button>
+          </div>
+          <div class="card-footer text-body-secondary">
+            <output id="lesson2-result">Виводиться результат</output>
+          </div>
+        </div>
+        <div class="card text-center mb-4">
+          <div class="card-header">
+            <b>Завдання 3</b>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Підрахуй суму всіх чисел в заданому користувачем діапазоні.</h5>
+            <div class="input-group flex-nowrap mb-2">
+              <span class="input-group-text" id="l3-num1">Перше число</span>
+              <input type="number" class="form-control less3-number1" value="16" aria-label="number1"
+                aria-describedby="l3-num1">
+            </div>
+            <div class="input-group flex-nowrap">
+              <span class="input-group-text" id="l3-num2">Друге число</span>
+              <input type="number" class="form-control less3-number2" value="20" aria-label="number2"
+                aria-describedby="l3-num2">
+            </div>
+            <button onclick="sumLesson3()" type="button">Результат</button>
+          </div>
+          <div class="card-footer text-body-secondary">
+            <output id="lesson3-result">Виводиться результат</output>
+          </div>
+        </div>
+
+        <div class="card text-center mb-4">
+          <div class="card-header">
+            <b>Завдання 4</b>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Запитай у користувача 2 числа і знайди найбільший спільний дільник.</h5>
+            <div class="input-group flex-nowrap mb-2">
+              <span class="input-group-text" id="l4-num1">Перше число</span>
+              <input type="number" class="form-control less4-number1" value="10" aria-label="number1"
+                aria-describedby="l4-num1">
+            </div>
+            <div class="input-group flex-nowrap">
+              <span class="input-group-text" id="l4-num2">Друге число</span>
+              <input type="number" class="form-control less4-number2" value="20" aria-label="number2"
+                aria-describedby="l4-num2">
+            </div>
+            <button onclick="findGCD()" type="button">Результат</button>
+          </div>
+          <div class="card-footer text-body-secondary">
+            <output id="lesson4-result">Виводиться результат</output>
+          </div>
+        </div>
+
+        <div class="card text-center mb-4">
+          <div class="card-header">
+            <b>Завдання 5</b>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Запитай у користувача число і виведи всі дільники цього числа.</h5>
+            <div class="input-group flex-nowrap mb-2">
+              <span class="input-group-text" id="l5-num1">Число</span>
+              <input type="number" class="form-control less5-number1" value="10" aria-label="number1"
+                aria-describedby="l5-num1">
+            </div>
+            <button onclick="findDilnik()" type="button">Результат</button>
+          </div>
+          <div class="card-footer text-body-secondary">
+            <output id="lesson5-result">Виводиться результат</output>
+          </div>
+        </div>
+
+        <div class="card text-center mb-4">
+          <div class="card-header">
+            <b>Завдання 6</b>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Запитай у користувача п’ятирозрядне число і визначи, чи є воно паліндромом.</h5>
+            <div class="input-group flex-nowrap mb-2">
+              <span class="input-group-text" id="l6-num1">Число</span>
+              <input type="number" class="form-control less6-number1" value="10101" aria-label="number1"
+                aria-describedby="l6-num1">
+            </div>
+            <button onclick="palindrom()" type="button">Результат</button>
+          </div>
+          <div class="card-footer text-body-secondary">
+            <output id="lesson6-result">Виводиться результат</output>
+          </div>
+        </div>
+
+        <div class="card text-center mb-4">
+          <div class="card-header">
+            <b>Завдання 7</b>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Запитай у користувача суму покупки і виведи суму до оплати зі знижкою:<br>
+              від 200 до 300 - знижка буде 3%;<br>
+              від 300 до 500 - 5%;<br>
+              від 500 і вище - 7%.</h5>
+            <div class="input-group flex-nowrap mb-2">
+              <span class="input-group-text" id="l7-num1">Сума</span>
+              <input type="number" class="form-control less7-number1" value="500" aria-label="number1"
+                aria-describedby="l7-num1">
+            </div>
+            <button onclick="discount()" type="button">Результат</button>
+          </div>
+          <div class="card-footer text-body-secondary">
+            <output id="lesson7-result">Виводиться результат</output>
+          </div>
+        </div>
+
+      </div>
+    </main>
+    <footer></footer>
+  </div>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
