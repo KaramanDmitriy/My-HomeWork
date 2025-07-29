@@ -198,6 +198,18 @@ function analyzeNumbers() {
 
     document.getElementById('lesson8-result').innerHTML = result;
 }
+function showWeekDays() {
+    const days = ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П’ятниця", "Субота"];
+    let currentDayIndex = new Date().getDay();
+
+    do {
+        const currentDay = days[currentDayIndex];
+        const next = confirm(`${currentDay}. Хочеш побачити наступний день?`);
+        if (!next) break;
+
+        currentDayIndex = (currentDayIndex + 1) % 7;
+    } while (true);
+}
 
 
 
