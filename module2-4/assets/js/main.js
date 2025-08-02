@@ -42,12 +42,12 @@ function sumLesson4() {
 
 function calculateArea(length, width) {
     if (!length && width) {
-      return width * width; // площа квадрата
+      return width * width; 
     }
     if (length && !width) {
-      return length * length; // площа квадрата
+      return length * length;
     }
-    return length * width; // площа прямокутника
+    return length * width;
 }
   
 function lesson5() {
