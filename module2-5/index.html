@@ -15,20 +15,27 @@
     <header></header>
     <main>
       <div class="container">
-        <h1>Функції</h1>
+        <h1>JS Object</h1>
 
         <div class="card text-center mb-4">
           <div class="card-header">
             <b>Завдання 1</b>
           </div>
           <div class="card-body">
-            <h5 class="card-title">Створи функцію, яка буде виводити кількість переданих їй аргументів.</h5>
-            <div class="input-group flex-nowrap mb-2">
-              <span class="input-group-text" id="l1-num1">Напиши числа через кому, а я тобі виведу кіл-ть чисел</span>
-              <input type="text" class="form-control less1-number1" value="16, 15, 1" aria-label="number1"
-                aria-describedby="l1-num1">
-            </div>
-            <button onclick="sumLesson1()" type="button">Результат</button>
+            <h5 class="card-title">Створи об'єкт, що описує автомобіль (виробник, модель, рік випуску, середня
+              швидкість, обсяг паливного баку, середня витрата палива на 100 км., водії), і наступні методи для роботи з
+              цим об'єктом:
+              <br>Метод, який виводить на екран інформацію про автомобіль.
+              <br>Додавання ім’я водія у список
+              <br>Перевірка водія на наявність його ім’я у списку
+              <br>Підрахунок необхідного часу та кількості палива для подолання переданої відстані з середньою
+              швидкістю.
+              Враховуй, що через кожні 4 години дороги водієві необхідно робити перерву на 1 годину. </h5>
+
+            <button onclick="less1_1()" type="button">Інформація про автомобіль</button>
+            <button onclick="less1_2()" type="button">Додати ім’я водія</button>
+            <button onclick="less1_3()" type="button">Перевірка водія на наявність його ім’я у списку</button>
+            <button onclick="less1_4()" type="button">Підрахунок часу та палива</button>
           </div>
           <div class="card-footer text-body-secondary">
             <output id="lesson1-result">Виводиться результат</output>
@@ -40,24 +47,15 @@
             <b>Завдання 2</b>
           </div>
           <div class="card-body">
-            <h5 class="card-title">Напиши функцію, яка приймає 2 числа і повертає :<br>
-              -1, якщо перше число менше, ніж друге;<br>
-              1 - якщо перше число більше, ніж друге;<br>
-              0 - якщо числа рівні.</h5>
-            <div class="input-group flex-nowrap mb-2">
-              <span class="input-group-text" id="l2-num1">Число перше</span>
-              <input type="number" class="form-control less2-number1" value="16" aria-label="number1"
-                aria-describedby="l2-num1">
-            </div>
-            <div class="input-group flex-nowrap">
-              <span class="input-group-text" id="l2-num2">Число друге</span>
-              <input type="number" class="form-control less2-number2" value="2" aria-label="number2"
-                aria-describedby="l2-num2">
-            </div>
-            <button onclick="runComparison()" type="button">Результат</button>
+            <h5 class="card-title">Створити об'єкт, що описує час (години, хвилини, секунди), і такі функції для роботи
+              з цим об'єктом:</h5>
+            <button onclick="less2_1()" type="button">Виведення часу</button>
+            <button onclick="less2_2()" type="button">Зміни часу на передану кількість секунд</button>
+            <button onclick="less2_3()" type="button">Зміни часу на передану кількість хвилин</button>
+            <button onclick="less2_4()" type="button">Зміни часу на передану кількість годин</button>
           </div>
           <div class="card-footer text-body-secondary">
-            <output id="lesson2-result">Виводиться результат</output>
+            <output id="lesson2_result">Виводиться результат</output>
           </div>
         </div>
 
@@ -66,116 +64,25 @@
             <b>Завдання 3</b>
           </div>
           <div class="card-body">
-            <h5 class="card-title">Напиши функцію, яка обчислює факторіал переданого їй числа.</h5>
-            <div class="input-group flex-nowrap mb-2">
-              <span class="input-group-text" id="l3-num1">Впиши число</span>
-              <input type="text" class="form-control less3-number1" value="5" aria-label="number1"
-                aria-describedby="l3-num1">
-            </div>
-            <button onclick="factorial()" type="button">Результат</button>
+            <h5 class="card-title">Створи об'єкт, що описує звичайний дріб. Створи об'єкт, який має методи роботи з
+              дробом:</h5>
+            <h3>Перший дріб:</h3>
+            <input class="form-control drib1-1" type="text" placeholder="Введи чисельник"
+              aria-label="default input example" value="3">
+            <input class="form-control drib1-2" type="text" placeholder="Введи знаменник"
+              aria-label="default input example" value="5">
+            <h3>Другий дріб:</h3>
+            <input class="form-control drib2-1" type="text" placeholder="Введи чисельник"
+              aria-label="default input example" value="1">
+            <input class="form-control drib2-2" type="text" placeholder="Введи знаменник"
+              aria-label="default input example" value="5">
+            <button class="btn-calc" onclick="less3_add()" type="button">Додати</button>
+            <button class="btn-calc" onclick="less3_subtract()" type="button">Відняти</button>
+            <button class="btn-calc" onclick="less3_divide()" type="button">Поділити</button>
+            <button class="btn-calc" onclick="less3_multiply()" type="button">Помножити</button>
           </div>
           <div class="card-footer text-body-secondary">
-            <output id="lesson3-result">Виводиться результат</output>
-          </div>
-        </div>
-
-        <div class="card text-center mb-4">
-          <div class="card-header">
-            <b>Завдання 4</b>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Напиши функцію, яка приймає три окремі цифри і перетворює їх в одне число. Наприклад:
-              цифри 1, 4, 9 перетворяться в число 149.</h5>
-            <div class="input-group flex-nowrap mb-2">
-              <span class="input-group-text" id="l4-num1">Цифра перша</span>
-              <input type="number" class="form-control less4-number1" value="6" aria-label="number1"
-                aria-describedby="l4-num1">
-            </div>
-            <div class="input-group flex-nowrap">
-              <span class="input-group-text" id="l4-num2">Цифра друга</span>
-              <input type="number" class="form-control less4-number2" value="2" aria-label="number2"
-                aria-describedby="l4-num2">
-            </div>
-            <div class="input-group flex-nowrap">
-              <span class="input-group-text" id="l4-num3">Цифра третя</span>
-              <input type="number" class="form-control less4-number3" value="5" aria-label="number3"
-                aria-describedby="l4-num3">
-            </div>
-            <button onclick="sumLesson4()" type="button">Результат</button>
-          </div>
-          <div class="card-footer text-body-secondary">
-            <output id="lesson4-result">Виводиться результат</output>
-          </div>
-        </div>
-
-        <div class="card text-center mb-4">
-          <div class="card-header">
-            <b>Завдання 5</b>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Напиши функцію, яка приймає довжину і ширину прямокутника і обчислює його площу. Якщо
-              в функцію передали 1 параметр, то вона обчислює площу квадрата.</h5>
-            <div class="input-group flex-nowrap mb-2">
-              <span class="input-group-text" id="l5-num1">Перша сторона</span>
-              <input type="number" class="form-control less5-number1" value="6" aria-label="number1"
-                aria-describedby="l5-num1">
-            </div>
-            <div class="input-group flex-nowrap">
-              <span class="input-group-text" id="l5-num2">Друга сторона</span>
-              <input type="number" class="form-control less5-number2" value="2" aria-label="number2"
-                aria-describedby="l5-num2">
-            </div>
-
-            <button onclick="lesson5()" type="button">Результат</button>
-          </div>
-          <div class="card-footer text-body-secondary">
-            <output id="lesson5-result">Виводиться результат</output>
-          </div>
-        </div>
-
-        <div class="card text-center mb-4">
-          <div class="card-header">
-            <b>Завдання 6</b>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Напиши функцію, яка перевіряє, чи є передане їй число “досконалим числом”. Досконале
-              число - це число, яке дорівнює сумі всіх своїх дільників.</h5>
-            <div class="input-group flex-nowrap mb-2">
-              <span class="input-group-text" id="l6-num1">Введи число</span>
-              <input type="number" class="form-control less6-number1" value="6" aria-label="number1"
-                aria-describedby="l6-num1">
-            </div>
-
-            <button onclick="lesson6()" type="button">Результат</button>
-          </div>
-          <div class="card-footer text-body-secondary">
-            <output id="lesson6-result">Виводиться результат</output>
-          </div>
-        </div>
-
-        <div class="card text-center mb-4">
-          <div class="card-header">
-            <b>Завдання 7</b>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Напиши функцію, яка приймає мінімальне і максимальне значення для діапазону, і
-              виводить тільки ті числа з діапазону, які є досконалими. Використовуй написану раніше функцію, щоб
-              дізнатися, чи є це число досконалим.</h5>
-            <div class="input-group flex-nowrap mb-2">
-              <span class="input-group-text" id="l7-num1">Перша число діапазону</span>
-              <input type="number" class="form-control less7-number1" value="1" aria-label="number1"
-                aria-describedby="l7-num1">
-            </div>
-            <div class="input-group flex-nowrap">
-              <span class="input-group-text" id="l7-num2">Друге число діапазону</span>
-              <input type="number" class="form-control less7-number2" value="100" aria-label="number2"
-                aria-describedby="l7-num2">
-            </div>
-
-            <button onclick="lesson7()" type="button">Результат</button>
-          </div>
-          <div class="card-footer text-body-secondary">
-            <output id="lesson7-result">Виводиться результат</output>
+            <output id="lesson3_result">Виводиться результат</output>
           </div>
         </div>
 
