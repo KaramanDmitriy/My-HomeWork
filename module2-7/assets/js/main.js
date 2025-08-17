@@ -2,27 +2,27 @@
 const songs = [
   {
     title: "Imagine Dragons – Believer",
-    url: "../music/imagine-dragons-believer-(meloua.com).mp3"
+    url: "assets/music/imagine-dragons-believer-(meloua.com).mp3"
   },
   { 
     title: "Glass Animals - Heat Waves",
-    url: "../music/glass-animals-heat-waves-(meloua.com).mp3"
+    url: "assets/music/glass-animals-heat-waves-(meloua.com).mp3"
   },
   {
     title: "VAN LIULENOV, DAMNITSKYI - ШОВКОВИЦЯ",
-    url: "../music/ivan-liulenov-damnitskyi-shovkovitsya-(meloua.com).mp3" 
+    url: "assets/music/ivan-liulenov-damnitskyi-shovkovitsya-(meloua.com).mp3" 
   },
   {
     title: "Sadsvit-Kaseta",
-    url: "../music/1694325604_sadsvit-kaseta.mp3" 
+    url: "assets/music/1694325604_sadsvit-kaseta.mp3" 
   },
   {
     title: "Foo Fighters - Today's Song",
-    url: "../music/1752413567_foo-fighters-todays-song.mp3" 
+    url: "assets/music/1752413567_foo-fighters-todays-song.mp3" 
   },
   {
     title: "Drevo-Smaragdove-nebo",
-    url: "../music/drevo-smaragdove-nebo-(meloua.com).mp3" 
+    url: "assets/music/drevo-smaragdove-nebo-(meloua.com).mp3" 
   }
 
 ];
