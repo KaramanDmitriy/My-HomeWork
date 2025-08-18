@@ -1,4 +1,20 @@
-// Плейлист з назвою та посиланням на аудіо
+(function () {
+  const container = document.createElement('div');
+  container.className = 'container';
+
+  const heading = document.createElement('h1');
+  heading.textContent = '🎵 Мій плейлист';
+
+  const playlist = document.createElement('div');
+  playlist.id = 'playlist';
+  playlist.className = 'playlist';
+
+  container.appendChild(heading);
+  container.appendChild(playlist);
+
+  document.body.appendChild(container);
+})();
+
 const songs = [
   {
     title: "Imagine Dragons – Believer",
@@ -27,10 +43,6 @@ const songs = [
 
 ];
 
-// Контейнер для плейлиста
-const playlistContainer = document.getElementById("playlist");
-
-// Генерація елементів DOM
 songs.forEach(song => {
   const songElement = document.createElement("div");
   songElement.className = "song";
@@ -45,5 +57,5 @@ songs.forEach(song => {
 
   songElement.appendChild(title);
   songElement.appendChild(audio);
-  playlistContainer.appendChild(songElement);
+  document.getElementById("playlist").appendChild(songElement);
 });
