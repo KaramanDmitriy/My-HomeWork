@@ -1,5 +1,3 @@
-//Завдання3
-
 const resizable = document.getElementById('resizable');
 const handle = document.getElementById('handle');
 

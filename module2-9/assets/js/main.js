@@ -1,4 +1,3 @@
-//Завдання1
 let isEditing = false;
 
 document.addEventListener('keydown', function (e) {
