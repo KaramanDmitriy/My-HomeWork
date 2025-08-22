@@ -1,5 +1,5 @@
+@import 'fonts';
 $text-color: #232323;
-
 *, *::before, *::after {
   padding: 0;
   margin: 0;
@@ -26,14 +26,37 @@ img {
 }
 
 .container {
-  width: min(90%, 1200px);
+  width: min(90%, 1000px);
   margin: 0 auto;
+  margin-top: 82px;
+  height: 860px;
+  background: url('../images/photo-min.jpg') no-repeat center center / cover;
+  position: relative;
+  padding-top: 154px;
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(10, 10, 10, 0.8);
+  }
+  #tabs {
+    width: 565px;
+    margin: 0 auto;
+    height: 552px;
+    z-index: 1;
+  }
 }
 
 body {
   font-size: 1rem;
   color: $text-color;
-  font-family: sans-serif;
+  font-family: 'Lato'!important;
+  background-color: rgba(41, 45, 62, 0.80);
+}
+.ui-widget {
+  font-family: 'Lato', sans-serif !important;
 }
 
 .page-wrapper {
@@ -44,9 +67,11 @@ body {
     flex-grow: 1;
   }
 }
+
+
 #donut {
-  width: 200px;
-  height: 200px;
+  width: 75px;
+  height: 75px;
   margin: 0 auto;
   rotate: 180deg;position: relative;
   &::after {
@@ -60,8 +85,150 @@ body {
     // transform: translate(-50%, -50%);
     width: 90%;
     height: 90%;
-    border: 8px solid #c3c0c0;
+    border: 4px solid #c3c0c0;
     border-radius: 50%;
     z-index: -1;
+  }
+  &::before {
+    content: "8.7";
+    position: absolute;
+    top: 23%;
+    left: 13%;
+    transform: translate(-50%, -50%);
+    font-size: 0.875rem;
+    color: white;
+    font-weight: 700;
+    rotate: -180deg;
+    font-size: 1.25rem;
+    line-height: 1.375rem;
+  }
+}
+.ui-widget-content {
+  background: #212534;
+}
+.ui-widget-header {
+  background-color: #2B3040;
+}
+.ui-tabs .ui-tabs-nav {
+  padding: 0;
+}
+
+
+.ui-tabs, .ui-tabs-nav, .ui-tabs-panel {
+  border: none !important;
+  box-shadow: none !important;
+}
+// .list-tab.active {
+//   stroke: white;
+//   color: white;
+// }
+h3 {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-top: 12px;
+  color:#8D91A3;
+}
+.ui-tabs-active h3 {
+  color: white;
+  stroke: white;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+  border: none !important;
+  background: none !important;
+  color: white !important;
+  stroke: white!important;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+  border: none !important;
+  background: none !important;
+  stroke: #8D91A3;
+}
+.ui-tabs .ui-tabs-nav {
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.75rem; /* 175% */
+  text-transform: uppercase;
+}
+
+.ui-widget-content {
+  color: #8D91A3;
+}
+#tabs-1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 40px;
+  .left-items {
+    width: 30%;
+    .film-img {
+      width: 160px;
+    }
+    
+  }
+  .right-items {
+    width: 60%;
+    .right-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    p {
+      max-width: 277px;
+      color: #B7BACD;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      margin-bottom: 50px;
+    }
+  }  
+}
+.my-rating {
+  padding-top: 25px;
+  width: 70%;
+  margin: 0 auto;
+}
+h2 {
+  color: #FFF;
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-bottom: 15px;
+}
+.release{
+  color: #FFF;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.right-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  a {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    background: #13E28D;
+    color: #FFF;
+    font-size: 1rem;
+    line-height: 1.25rem; /* 125% */
+    text-transform: uppercase;
+    transition: all .4s ease;
+    &:hover {
+      background: #0FB97E;
+    }
+  }
+  .discount {
+    color: #FFDD3F;
+    font-size: 0.75rem;
+    line-height: 1.25rem; /* 166.667% */
+  }
+  .price {
+    color: #FFF;
+    font-size: 2rem;
+    line-height: 2rem; /* 100% */
   }
 }
