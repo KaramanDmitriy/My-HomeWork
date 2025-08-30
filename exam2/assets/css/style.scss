@@ -1,0 +1,193 @@
+@import 'fonts';
+$text-color: #2C4058;
+$light-color: #FFF;
+$black-color: #000;
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a, button {
+  transition: all .2s ease;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;  
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+svg use {
+  fill: #fff;
+}
+.container {
+  width: min(90%, 1170px);
+  margin: 0 auto;
+}
+
+body {
+  color: $text-color;
+  font-family: "Open Sans";
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  background-color: rgb(98, 63, 154);
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100dvh;
+  main {
+    flex-grow: 1;
+  }
+}
+
+header {
+  background-color: transparent;
+  height: 54px;
+  position: fixed;
+  top: 53px;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  // border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo a {
+      max-width: 240px;
+      display: inline-block;
+      filter: none;
+      transition: all .4s ease;
+      &:hover {
+        filter: invert(100%);
+      }
+    }
+    nav {
+      width: 450px;
+    }
+    .menu {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+      a {
+        text-transform: uppercase;
+        color: $light-color;
+        color: #FFF;
+        font-family: 'Source Sans 3';
+        font-size: 0.875rem;
+        line-height: normal;
+        transition: all .4s ease;
+        &:hover {
+          color: $black-color;
+          span {
+            border-color: $black-color;
+          }
+        }
+        span {
+          display: inline-block;
+          margin-right: 14px;
+          width: 9px;
+          height: 9px;
+          border-radius: 50%;
+          border: 1px solid $light-color;
+          transition: all .4s ease;
+          &.menu--active {
+            background-color: $light-color;
+          }
+        }
+      }
+    }
+    .socials {
+      display: flex;
+      gap: 20px;
+      a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border: 1px solid $light-color;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        transition: all .4s ease;
+        svg {
+          width: 60%;
+          height: 60%;
+          fill: $light-color;
+          use {
+            transition: all .4s ease;
+          }
+        }
+        &:hover {
+          border-color: $black-color;
+          svg use {
+          fill: $black-color;
+          }
+        } 
+      }
+    }
+  }
+}
+.hero {
+  position: relative;
+  .link-down {
+    position: absolute;
+    bottom: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $light-color;
+    border-radius: 50%;
+    transition: all .4s ease;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 10px;
+      border-bottom: 1px solid $light-color;
+      border-right: 1px solid $light-color;
+      transform: translate(-50%, -50%) rotate(45deg);
+      transition: all .4s ease;
+    }
+    &:hover {
+      border-color: $black-color;
+      &::before {
+        border-color: $black-color;
+      }
+    }
+  }
+}
+#lightSlider {
+  max-height: 100dvh;
+  .hero-item {
+    width: 100%;
+    height: 100dvh;
+    background-color: rgba(36, 35, 35, 0.9);
+  }
+}
