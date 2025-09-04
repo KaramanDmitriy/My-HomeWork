@@ -12,6 +12,8 @@
   <meta name="apple-mobile-web-app-title" content="Monticello" />
   <link rel="manifest" href="assets/images/fav/site.webmanifest" />
   <link rel="stylesheet" href="assets/css/lightslider.min.css">
+  <link type="text/css" rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
   <link rel="stylesheet" href="assets/css/style.min.css">
 </head>
 
@@ -190,7 +192,25 @@
       <section class="gallery" id="gallery">
         <div class="container">
           <h2>GALLERY</h2>
-          <div class="gallery-items">
+          <div class="gallery-items" id="static-thumbnails">
+            <a class="col-2 row-2" href="assets/images/all/gallery1.webp">
+              <img src="assets/images/all/gallery1.webp" />
+            </a>
+            <a href="assets/images/all/gallery2.webp">
+              <img src="assets/images/all/gallery2.webp" />
+            </a>
+            <a href="assets/images/all/gallery3.webp">
+              <img src="assets/images/all/gallery3.webp" />
+            </a>
+            <a href="assets/images/all/gallery4.webp">
+              <img src="assets/images/all/gallery4.webp" />
+            </a>
+            <a href="assets/images/all/gallery5.webp">
+              <img src="assets/images/all/gallery5.webp" />
+            </a>
+          </div>
+          <div class="gallery-btn">
+            <a class="btn">MORE DETAILS</a>
           </div>
         </div>
       </section>
@@ -200,6 +220,10 @@
 
   <script src="assets/js/jquery-3.7.1.min.js"></script>
   <script src="assets/js/lightslider.min.js"></script>
+  <script src="assets/js/lightgallery.umd.js"></script>
+  <script src="assets/js/lightgallery.min.js"></script>
+  <script src="assets/js/plugins/lg-thumbnail.umd.js"></script>
+  <script src="assets/js/plugins/lg-zoom.umd.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 
