@@ -89,8 +89,9 @@ mapLink.onclick = function(e) {
 const initMap = () => {
     mapLink.remove()
     const map = L.map('map').setView([40.6769250758231, -73.94284449298787], 18);
+    const API_KEY_MAP = '1061f057-970f-4466-a8d6-227b90cb2dba'
 
-    L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}.png', {
+    L.tileLayer(`https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}.png?api_key=${API_KEY_MAP}`, {
         attribution: '<a href="https://www.openstreetmap.org/copyright">OSM</a>'
     }).addTo(map);
 
