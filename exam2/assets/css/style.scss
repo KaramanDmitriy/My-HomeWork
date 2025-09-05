@@ -351,7 +351,7 @@ h2 {
     }
   }
 }
-a.btn {
+a.btn, button.btn {
   display: inline-block;
   padding: 16px 41px;
   border: 1px solid $text-color;
@@ -606,3 +606,43 @@ a.btn {
   text-align: center;
 }
 
+#map {
+  height: 700px;
+  #load-map-link {
+    display: block;
+    height: 100%;
+    position: relative;
+    text-decoration: none;
+    
+    p {
+      position: absolute;
+      left: 50%;
+      top: 30%;
+      transform: translate(-50%, -50%);
+      color: $light-color;
+      opacity: 0;
+      font-size: 4rem;
+      font-weight: 700;
+      z-index: 2;
+      transition: all .4s ease;
+    }
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      background-color: rgba(36, 35, 35, 0.5);
+      opacity: 0;
+      z-index: 1;
+      transition: all .4s ease;
+    }
+    &:hover {
+      p, &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
