@@ -807,7 +807,7 @@ textarea:not(:placeholder-shown) + span{
   text-align: right;
 }
 footer {
-  background: url('../images/all/footer-bg.webp') no-repeat center bottom / contain, linear-gradient(251deg, #7E5AFF -2.19%, #55B7FF 103.21%) ;
+  background: url('../images/all/footer-bg.webp') no-repeat center bottom / cover, linear-gradient(251deg, #7E5AFF -2.19%, #55B7FF 103.21%) ;
 }
 .footer-container {
   padding-top: 203px;
