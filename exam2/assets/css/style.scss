@@ -12,6 +12,11 @@ $dark-accent: #7E5AFF;;
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 ul, ol {
   list-style: none;
 }

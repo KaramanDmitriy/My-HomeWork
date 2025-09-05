@@ -121,3 +121,39 @@ form.onsubmit = async function(e) {
     }
     formInProgress = false
 }
+var myLazyLoad = new LazyLoad();
+// After your content has changed...
+myLazyLoad.update();
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section[id]");
+  const menuLinks = document.querySelectorAll(".menu li a");
+
+  function getOffsetTop(elem) {
+    return elem.getBoundingClientRect().top + window.scrollY;
+  }
+
+  function onScroll() {
+    const scrollPos = window.scrollY + 100; // 100px запас для фіксованого хедера
+    let currentSectionId = "";
+
+    sections.forEach(section => {
+      const sectionTop = getOffsetTop(section);
+      if (scrollPos >= sectionTop) {
+        currentSectionId = section.getAttribute("id");
+      }
+    });
+
+    menuLinks.forEach(link => {
+      const span = link.querySelector(".circle");
+      if (link.getAttribute("href") === `#${currentSectionId}`) {
+        span.classList.add("menu--active");
+      } else {
+        span.classList.remove("menu--active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", onScroll);
+  onScroll(); // виклик при завантаженні сторінки
+});
