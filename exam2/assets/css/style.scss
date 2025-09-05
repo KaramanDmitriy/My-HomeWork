@@ -635,6 +635,8 @@ a.btn, button.btn {
       font-weight: 700;
       z-index: 2;
       transition: all .4s ease;
+      width: 100%;
+      text-align: center;
     }
     &::after {
       content: '';
@@ -964,12 +966,34 @@ footer {
 #news-slider {
   display: flex;
 }
+@media (max-width: 1780px) {
+  ul.contact-item {
+    width: 70%;
+  }
+}
+@media (max-width: 1450px) {
+  #contacts .form-contact {
+    width: 70%;
+  }
+}
 @media (max-width: 1130px) {
   .news .news-next{
     right: 5%;
   }
   .news .news-prev{
     left: 5%;
+  }
+  .contact-items {
+    flex-direction: column;
+    .contact-item {
+      margin: 0 auto;
+    }
+  }
+  #contacts .form-contact {
+    bottom: -45%
+  }
+  .footer-container {
+    padding-top: 400px;
   }
 }
 @media (max-width: 1000px) {
@@ -1032,6 +1056,28 @@ footer {
       margin-bottom: 40px;
     }
   }
+  .gallery .container {
+    padding-top: 100px;
+    padding-bottom: 60px;
+    h2 {
+      margin-bottom: 60px;
+    }
+  }
+  .footer-container {
+    padding-bottom: 130px;
+  }
+}
+@media (max-width: 800px) {
+    ul.contact-item {
+      width: 88%;
+    }
+    .footer-container {
+      width: 80%;
+    }
+    #map #load-map-link p {
+      font-size: 3rem;
+      top: 15%;
+    }
 }
 @media (max-width: 615px) {
   .hero .hero-item {
@@ -1063,5 +1109,55 @@ footer {
   }
   header .burger {
     padding-top: 1%;
+  }
+  ul.contact-item {
+    width: 95%;
+  }
+  #contacts .form-contact {
+      width: 85%;
+  }
+}
+@media (max-width: 545px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+  .hero .hero-item h1 {
+    top: 35%;
+    font-size: 3rem;
+    line-height: 3rem;
+    letter-spacing: .3rem;
+  }
+  .hero .hero-item .sub-title {
+    top: 60%;
+  }
+  .about_item .about_item_text h3 {
+    font-size: 2rem;
+  }
+  .news .news-prev {
+    left: 2%;
+    height: 35px;
+    width: 35px;
+  }
+  .news .news-next {
+    right: 2%;
+    height: 35px;
+    width: 35px;
+  }
+  .col-2 {
+    grid-column: span 1;
+  }
+  #map #load-map-link p {
+      font-size: 2.1rem;
+  }
+  footer .socials {
+    flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  ul.contact-item {
+    width: 100%;
+  }
+  .contact-items {
+    width: 95%;
   }
 }
