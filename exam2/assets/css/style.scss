@@ -1271,8 +1271,11 @@ footer {
   .about {
       padding: 100px 0 60px;
   }
-  header .burger, header .logo {
+  header .burger {
     padding-top: 1%;
+  }
+  header .logo {
+    padding-top: 2%;
   }
   
   ul.contact-item {
