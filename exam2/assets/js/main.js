@@ -40,8 +40,14 @@ $(document).ready(function() {
     controls: false, // Вимикаємо стандартні стрілки
     pager: true,
     responsive: [
+        {
+        breakpoint: 1130,
+        settings: {
+          item: 2
+        }
+      },
       {
-        breakpoint: 768,
+        breakpoint: 880,
         settings: {
           item: 1
         }
@@ -157,3 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", onScroll);
   onScroll(); // виклик при завантаженні сторінки
 });
+
+function toogleMenu() {
+    document.body.classList.toggle('open-menu')
+}
