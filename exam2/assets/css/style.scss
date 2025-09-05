@@ -502,6 +502,7 @@ a.btn, button.btn {
     width: 370px;
     .news-img {
       margin-bottom: 30px;
+      aspect-ratio: 347/225;
     }
     h4 {
       width: 85%;
@@ -530,6 +531,8 @@ a.btn, button.btn {
       margin-bottom: 30px;
       .author-avatar img {
         border-radius: 50%;
+        height: 60px;
+        width: 60px;
       }
       .author-text {
         .author-name {
