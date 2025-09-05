@@ -1238,6 +1238,9 @@ footer {
       font-size: 3rem;
       top: 15%;
     }
+    header .logo{
+    padding-top: 0;
+  }
 }
 @media (max-width: 615px) {
   .hero .hero-item {
@@ -1274,8 +1277,8 @@ footer {
   header .burger {
     padding-top: 1%;
   }
-  header .logo {
-    padding-top: 2%;
+  header .logo{
+    padding-top: 3%;
   }
   
   ul.contact-item {
