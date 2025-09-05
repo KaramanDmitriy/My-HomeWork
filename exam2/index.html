@@ -261,10 +261,18 @@
                 </a>
               </li>
             </ul>
-            <form id="subscr">
-              <input type="text" placeholder="Name" name="name" id="name" required>
-              <input type="email" placeholder="Email" name="email" id="email" required>
-              <button class="btn" type="submit">SUBMIT</button>
+            <form id="subscr" class="contact-form-items">
+              <label for="name">
+                <input type="text" placeholder="Name" name="name" id="name" required>
+                <span>Name</span>
+              </label>
+              <label for="email">
+                <input type="email" placeholder="Email" name="email" id="email" required>
+                <span>Email</span>
+              </label>
+              <div class="form-btn">
+                <button class="btn" type="submit">SUBMIT</button>
+              </div>
             </form>
           </div>
 
@@ -272,12 +280,35 @@
       </section>
     </main>
     <footer>
-      <p><br>
-        <br>
-        <br>
-        <br>
-        <br>
-      </p>
+      <div class="footer-container">
+        <div class="footer-left">
+          <div class="logo">
+            <a href="#"><img src="assets/images/Logo.png" alt="logo"></a>
+          </div>
+          <div class="copyright">
+            <a href="#">Copyrights © 2020 Montichello</a>
+          </div>
+        </div>
+        <div class="footer-right">
+          <ul class="socials">
+            <li><a href="#">
+                <svg class="icon">
+                  <use xlink:href="assets/images/brands/sprite.svg#fb"></use>
+                </svg>
+              </a></li>
+            <li><a href="#">
+                <svg class="icon">
+                  <use xlink:href="assets/images/brands/sprite.svg#twitter-brands-solid"></use>
+                </svg>
+              </a></li>
+            <li><a href="#">
+                <svg class="icon">
+                  <use xlink:href="assets/images/brands/sprite.svg#instagram-brands-solid"></use>
+                </svg>
+              </a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
   </div>
 

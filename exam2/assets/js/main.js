@@ -115,7 +115,7 @@ form.onsubmit = async function(e) {
     const answer = await resp.json()
     if(answer.ok) {
         alert('You succesfully subscribed')
-        form.reset
+        form.reset()
     }else {
         alert('Some error occurred')
     }

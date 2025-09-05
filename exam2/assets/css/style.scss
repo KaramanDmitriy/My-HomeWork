@@ -65,7 +65,7 @@ header {
   top: 53px;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 1000;
   // border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
@@ -79,15 +79,7 @@ background: linear-gradient(90deg,rgba(255, 255, 255, .7) 0%, rgba(70, 79, 236, 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .logo a {
-      max-width: 240px;
-      display: inline-block;
-      filter: none;
-      transition: all .4s ease;
-      &:hover {
-        filter: invert(100%);
-      }
-    }
+    
     nav {
       width: 450px;
     }
@@ -124,36 +116,46 @@ background: linear-gradient(90deg,rgba(255, 255, 255, .7) 0%, rgba(70, 79, 236, 
         }
       }
     }
-    .socials {
-      display: flex;
-      gap: 20px;
-      a {
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        border: 1px solid $light-color;
-        border-radius: 50%;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
+    
+  }
+}
+.logo a {
+  max-width: 240px;
+  display: inline-block;
+  filter: none;
+  transition: all .4s ease;
+  &:hover {
+    filter: invert(100%);
+  }
+}
+.socials {
+  display: flex;
+  gap: 20px;
+  a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $light-color;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transition: all .4s ease;
+    svg {
+      width: 60%;
+      height: 60%;
+      fill: $light-color;
+      use {
         transition: all .4s ease;
-        svg {
-          width: 60%;
-          height: 60%;
-          fill: $light-color;
-          use {
-            transition: all .4s ease;
-          }
-        }
-        &:hover {
-          border-color: $black-color;
-          svg use {
-          fill: $black-color;
-          }
-        } 
       }
     }
+    &:hover {
+      border-color: $black-color;
+      svg use {
+      fill: $black-color;
+      }
+    } 
   }
 }
 .hero {
@@ -654,7 +656,7 @@ a.btn, button.btn {
     left: 50%;
     transform: translateX(-50%);
     width: 55%;
-    background-color: $light-color;
+    background: url('../images/all/contact-bg.webp') no-repeat center bottom /contain, #fff;
     z-index: 405;
     padding-top: 90px;
     padding-bottom: 68px;
@@ -677,7 +679,7 @@ a.btn, button.btn {
   }
 }
 .contact-items {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   // display: grid;
   display: flex;
@@ -690,6 +692,10 @@ a.btn, button.btn {
     font-family: Montserrat;
     font-size: 1.125rem;
     line-height: 1.75rem;
+    transition: all .4s ease;
+    &:hover {
+      color: $dark-accent;
+    }
     span {
       margin-right: 10px;
       text-align: center;
@@ -705,6 +711,116 @@ a.btn, button.btn {
     }
   }
 }
+.contact-form-items {
+  label{
+    margin-bottom:15px;
+    position:relative;
+    border-bottom:1px solid #2C4058;
+    cursor: pointer;
+  }
+  input, textarea{
+    width:100%;
+    padding:10px 0px;
+    margin-top:35px;
+    border:none;
+    outline:none;
+    resize: none;
+    background-color: transparent;
+    color: $black-color;
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+    
+  }
+  input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{
+    opacity:0;
+  }
+  input::-moz-placeholder, textarea::-moz-placeholder{
+    opacity:0;
+  }
+  input:-ms-input-placeholder, textarea:-ms-input-placeholder{
+    opacity:0;
+  }
+  input::-ms-input-placeholder, textarea::-ms-input-placeholder{
+    opacity:0;
+  }
+  input::placeholder, textarea::placeholder{
+    opacity:0;
+  }
+  span{
+    position:absolute;
+    top:-35px;
+    left:0;
+    -webkit-transform:translateY(30px);
+        -ms-transform:translateY(30px);
+            transform:translateY(30px);
+    font-size:0.825em;
+    -webkit-transition-duration:300ms;
+         -o-transition-duration:300ms;
+            transition-duration:300ms;
+    color: $text-color;
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+    opacity: 0.5;
+  }
+  input:not(:-moz-placeholder-shown) + span{
+  color: $black-color;
+  transform:translateY(10px);
+}
+  input:not(:-ms-input-placeholder) + span{
+  color: $black-color;
+  -ms-transform:translateY(0px);
+      transform:translateY(0px);
+}
+  label:focus-within > span,
+input:not(:placeholder-shown) + span{
+  color: $black-color;
+  -webkit-transform:translateY(0px);
+      -ms-transform:translateY(0px);
+          transform:translateY(0px);
+}
+textarea:not(:-moz-placeholder-shown) + span{
+  color: $black-color;
+  transform:translateY(0px);
+}
+textarea:not(:-ms-input-placeholder) + span{
+  color: $black-color;
+  -ms-transform:translateY(0px);
+      transform:translateY(0px);
+}
+label:focus-within > span,
+textarea:not(:placeholder-shown) + span{
+  color: $black-color;
+  -webkit-transform:translateY(0px);
+      -ms-transform:translateY(0px);
+          transform:translateY(0px);
+}
+}
+.form-btn {
+  padding-top: 30px;
+  text-align: right;
+}
 footer {
-  background-color: $dark-accent;
+  background: url('../images/all/footer-bg.webp') no-repeat center bottom / contain, linear-gradient(251deg, #7E5AFF -2.19%, #55B7FF 103.21%) ;
+}
+.footer-container {
+  padding-top: 203px;
+  padding-bottom: 234px;
+  width: 55%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  .logo {
+    margin-bottom: 40px;
+  }
+  .copyright a {
+    color: $light-color;
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    transition: all .4s ease;
+    &:hover {
+      color: $black-color;
+    }
+  }
 }
