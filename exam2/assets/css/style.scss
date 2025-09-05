@@ -646,3 +646,65 @@ a.btn, button.btn {
     }
   }
 }
+#contacts {
+  position: relative;
+  .form-contact {
+    position: absolute;
+    bottom: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55%;
+    background-color: $light-color;
+    z-index: 405;
+    padding-top: 90px;
+    padding-bottom: 68px;
+    h2 {
+      color: $text-color;
+      margin-bottom: 60px;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 1px;
+        background-color: $text-color;
+      }
+    }
+    
+  }
+}
+.contact-items {
+  width: 90%;
+  margin: 0 auto;
+  // display: grid;
+  display: flex;
+  justify-content: space-between;
+  li {
+    margin-bottom: 40px;
+  }
+  a {
+    color: $black-color;
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    span {
+      margin-right: 10px;
+      text-align: center;
+    }
+    svg {
+      vertical-align: text-top;
+      max-width: 20px;
+      max-height: 20px;
+        // width: 100%;
+      use {
+        fill: $dark-accent;
+      }
+    }
+  }
+}
+footer {
+  background-color: $dark-accent;
+}

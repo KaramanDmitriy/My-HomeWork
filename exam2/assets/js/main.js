@@ -99,7 +99,24 @@ const initMap = () => {
 }
 
 const form = document.getElementById('subscr')
-form.onsubmit = function(e) {
+let formInProgress = false
+form.onsubmit = async function(e) {
     e.preventDefault()
-    
+    if(formInProgress) return
+
+    formInProgress = true
+    const token = '8407817457:AAHqGaeQLBrPJNM6VGC72CV16vfaZBF26yY';
+    const chat = '-1003054409449'
+    const name = document.getElementById('name').value
+    const email = document.getElementById('email').value
+    const message = `<b>Name: </b>%0a<i>${name}</i>%0a<b>Email: </b>%0a<i>${email}</i>`
+    const resp = await fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat}&parse_mode=html&text=${message}`)
+    const answer = await resp.json()
+    if(answer.ok) {
+        alert('You succesfully subscribed')
+        form.reset
+    }else {
+        alert('Some error occurred')
+    }
+    formInProgress = false
 }
