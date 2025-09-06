@@ -39,6 +39,27 @@ $(document).ready(function() {
     pause: 4000,
     controls: false, // Вимикаємо стандартні стрілки
     pager: true,
+    onSliderLoad: function (el) {
+    var showActiveSlides = function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.src = entry.target.dataset.src;
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    var imageWidth = el.find("li").outerWidth() + "px";
+
+    var observer = new window.IntersectionObserver(showActiveSlides, {
+        root: el.parent()[0],
+        rootMargin: "0px "+ imageWidth + " 0px " + imageWidth
+    });
+
+    el.find("li img").each(function () {
+        observer.observe(this);
+    });
+},
     responsive: [
         {
         breakpoint: 1130,
@@ -167,3 +188,4 @@ document.addEventListener("DOMContentLoaded", function () {
 function toogleMenu() {
     document.body.classList.toggle('open-menu')
 }
+
